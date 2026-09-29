@@ -1,0 +1,522 @@
+
+/* =========================================================
+   VYBE EVENTS — PREMIUM ANIMATION LAYER
+   Add this AFTER your existing eventdetails CSS
+   ========================================================= */
+
+/* ---------- GLOBAL REVEAL ---------- */
+
+.events-page .events-hero-section,
+.events-page .events-filter-section,
+.events-page .featured-events-section,
+.events-page .upcoming-events-section,
+.events-page .event-categories-section,
+.events-page .event-experience-section,
+.events-page .city-vybe-section,
+.events-page .events-final-section {
+    animation: sectionReveal 0.9s cubic-bezier(.22,.61,.36,1) both;
+}
+
+@keyframes sectionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- HERO ---------- */
+
+.events-page .events-hero-section {
+    overflow: hidden;
+}
+
+.events-page .events-hero-section::before {
+    animation: heroImageZoom 12s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes heroImageZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+.events-page .events-hero-content {
+    animation: heroContentIn 1.1s cubic-bezier(.16,1,.3,1) 0.15s both;
+}
+
+@keyframes heroContentIn {
+    from {
+        opacity: 0;
+        transform: translateY(55px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.events-page .events-hero-content h1 {
+    animation: heroTitleIn 1.2s cubic-bezier(.16,1,.3,1) 0.3s both;
+}
+
+@keyframes heroTitleIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        letter-spacing: .25em;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: normal;
+    }
+}
+
+
+/* ---------- HERO STATS ---------- */
+
+.events-page .hero-stat {
+    animation: statReveal .8s cubic-bezier(.16,1,.3,1) both;
+}
+
+.events-page .hero-stat:nth-child(1) {
+    animation-delay: .45s;
+}
+
+.events-page .hero-stat:nth-child(2) {
+    animation-delay: .58s;
+}
+
+.events-page .hero-stat:nth-child(3) {
+    animation-delay: .71s;
+}
+
+@keyframes statReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- FILTER BUTTONS ---------- */
+
+.events-page .filter-btn {
+    position: relative;
+    overflow: hidden;
+    transition:
+        color .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        transform .3s ease;
+}
+
+.events-page .filter-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #111;
+    transform: translateY(101%);
+    transition: transform .35s cubic-bezier(.22,.61,.36,1);
+    z-index: -1;
+}
+
+.events-page .filter-btn:hover::before,
+.events-page .filter-btn.active::before {
+    transform: translateY(0);
+}
+
+.events-page .filter-btn:hover,
+.events-page .filter-btn.active {
+    color: #fff;
+    border-color: #111;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- FEATURED EVENT CARDS ---------- */
+
+.events-page .event-card {
+    opacity: 0;
+    animation: cardReveal .8s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+.events-page .event-card:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.events-page .event-card:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.events-page .event-card:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.events-page .event-card:nth-child(4) {
+    animation-delay: .4s;
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.events-page .event-card {
+    transition:
+        transform .45s cubic-bezier(.16,1,.3,1),
+        box-shadow .45s ease;
+}
+
+.events-page .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 45px rgba(0,0,0,.14);
+}
+
+
+/* ---------- CARD IMAGE ---------- */
+
+.events-page .event-card-image,
+.events-page .event-card img {
+    overflow: hidden;
+}
+
+.events-page .event-card-image img,
+.events-page .event-card > img {
+    transition:
+        transform .8s cubic-bezier(.16,1,.3,1),
+        filter .5s ease;
+}
+
+.events-page .event-card:hover .event-card-image img,
+.events-page .event-card:hover > img {
+    transform: scale(1.08);
+    filter: saturate(1.08);
+}
+
+
+/* ---------- IMAGE OVERLAY ---------- */
+
+.events-page .event-card-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,.08);
+    opacity: 0;
+    transition: opacity .45s ease;
+    pointer-events: none;
+}
+
+.events-page .event-card:hover .event-card-image::after {
+    opacity: 1;
+}
+
+
+/* ---------- UPCOMING EVENT ROWS ---------- */
+
+.events-page .upcoming-event-row {
+    position: relative;
+    overflow: hidden;
+    transition:
+        padding-left .4s ease,
+        background .4s ease,
+        border-color .4s ease;
+}
+
+.events-page .upcoming-event-row::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #fff;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform .45s cubic-bezier(.16,1,.3,1);
+}
+
+.events-page .upcoming-event-row:hover {
+    padding-left: 20px;
+    background: #111;
+}
+
+.events-page .upcoming-event-row:hover::before {
+    transform: scaleY(1);
+}
+
+
+/* ---------- DATE NUMBER ---------- */
+
+.events-page .event-date-number {
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+.events-page .upcoming-event-row:hover .event-date-number {
+    transform: translateX(5px);
+    opacity: .7;
+}
+
+
+/* ---------- CATEGORY CARDS ---------- */
+
+.events-page .category-card {
+    overflow: hidden;
+    transition:
+        transform .45s cubic-bezier(.16,1,.3,1),
+        background .35s ease,
+        color .35s ease;
+}
+
+.events-page .category-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid #111;
+    transform: scale(.92);
+    opacity: 0;
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+    pointer-events: none;
+}
+
+.events-page .category-card:hover {
+    transform: translateY(-8px);
+    background: #111;
+    color: #fff;
+}
+
+.events-page .category-card:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.events-page .category-card i,
+.events-page .category-card .category-icon {
+    transition:
+        transform .45s cubic-bezier(.16,1,.3,1);
+}
+
+.events-page .category-card:hover i,
+.events-page .category-card:hover .category-icon {
+    transform: scale(1.12) rotate(-5deg);
+}
+
+
+/* ---------- EXPERIENCE IMAGE ---------- */
+
+.events-page .event-experience-image {
+    overflow: hidden;
+}
+
+.events-page .event-experience-image img {
+    transition:
+        transform 1s cubic-bezier(.16,1,.3,1),
+        filter .6s ease;
+}
+
+.events-page .event-experience-image:hover img {
+    transform: scale(1.06);
+    filter: contrast(1.05);
+}
+
+
+/* ---------- EXPERIENCE POINTS ---------- */
+
+.events-page .experience-point {
+    transition:
+        transform .4s ease,
+        border-color .4s ease;
+}
+
+.events-page .experience-point:hover {
+    transform: translateX(8px);
+    border-color: #111;
+}
+
+.events-page .experience-point-number {
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+.events-page .experience-point:hover .experience-point-number {
+    transform: scale(1.12);
+    opacity: .65;
+}
+
+
+/* ---------- CITY GRID ---------- */
+
+.events-page .city-card {
+    overflow: hidden;
+    transition:
+        transform .45s cubic-bezier(.16,1,.3,1),
+        filter .45s ease;
+}
+
+.events-page .city-card:hover {
+    transform: translateY(-7px);
+}
+
+.events-page .city-card img {
+    transition:
+        transform .9s cubic-bezier(.16,1,.3,1),
+        filter .6s ease;
+}
+
+.events-page .city-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(.8);
+}
+
+
+/* ---------- FINAL CTA ---------- */
+
+.events-page .events-final-section {
+    overflow: hidden;
+}
+
+.events-page .events-final-section::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 50%;
+    left: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: ctaOrbit 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes ctaOrbit {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+
+/* ---------- CTA BUTTON ---------- */
+
+.events-page .primary-button,
+.events-page .secondary-button {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease;
+}
+
+.events-page .primary-button::before,
+.events-page .secondary-button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    background: rgba(255,255,255,.14);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition:
+        width .55s ease,
+        height .55s ease;
+}
+
+.events-page .primary-button:hover::before,
+.events-page .secondary-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.events-page .primary-button:hover,
+.events-page .secondary-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ---------- SCROLL REVEAL SUPPORT ---------- */
+
+.events-page .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity .8s cubic-bezier(.16,1,.3,1),
+        transform .8s cubic-bezier(.16,1,.3,1);
+}
+
+.events-page .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .events-page *,
+    .events-page *::before,
+    .events-page *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 650px) {
+
+    .events-page .event-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .events-page .upcoming-event-row:hover {
+        padding-left: 10px;
+    }
+
+    .events-page .events-final-section::before {
+        width: 280px;
+        height: 280px;
+        left: -150px;
+    }
+}

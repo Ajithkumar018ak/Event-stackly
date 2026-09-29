@@ -1,0 +1,1834 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experience — VYBE | Live Events. Unforgettable Moments.</title>
+
+    <meta
+        name="description"
+        content="Experience live music, festivals, comedy, nightlife and unforgettable moments with VYBE."
+    >
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="experience-page">
+
+<!-- =========================================================
+     CUSTOM MIC CURSOR
+========================================================= -->
+
+<div class="mic-cursor" id="micCursor">
+    <span class="mic-cursor-ring"></span>
+    <span class="mic-cursor-icon">🎙</span>
+</div>
+
+
+<!-- =========================================================
+     SCROLL PROGRESS
+========================================================= -->
+
+<div class="scroll-progress" id="mermlp">
+    <span id="scrollProgress"></span>
+</div>
+
+
+<!-- =========================================================
+     PRELOADER
+========================================================= -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-noise"></div>
+
+    <div class="preloader-inner">
+
+        <div class="preloader-brand">
+
+            <span class="preloader-brand-mark">
+                V
+            </span>
+
+            <div>
+                <strong>VYBE</strong>
+                <small>LIVE EVENTS PLATFORM</small>
+            </div>
+
+        </div>
+
+
+        <div class="drum-animation">
+
+            <div class="drum-unit drum-left">
+
+                <div class="drum-shell">
+                    <div class="drum-top"></div>
+                    <div class="drum-rim"></div>
+                    <div class="drum-line"></div>
+                </div>
+
+                <div class="drum-stick stick-left"></div>
+
+            </div>
+
+
+            <div class="drum-center">
+
+                <span>FEEL</span>
+                <strong>THE BEAT</strong>
+
+            </div>
+
+
+            <div class="drum-unit drum-right">
+
+                <div class="drum-shell">
+                    <div class="drum-top"></div>
+                    <div class="drum-rim"></div>
+                    <div class="drum-line"></div>
+                </div>
+
+                <div class="drum-stick stick-right"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="preloader-ticket" id="ticketLoader">
+
+            <div class="ticket-perforation"></div>
+
+            <div class="ticket-content">
+
+                <div class="ticket-head">
+
+                    <span>VYBE LIVE</span>
+
+                    <span>
+                        2026
+                    </span>
+
+                </div>
+
+                <strong>
+                    ADMIT ONE
+                </strong>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-info">
+
+                    <span>
+                        LIVE EXPERIENCE
+                    </span>
+
+                    <span>
+                        ENTRY
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="loader-status">
+
+            <strong>
+                <span id="loaderPercent">0</span>%
+            </strong>
+
+            <span>
+                PREPARING YOUR EXPERIENCE
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-inner">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+
+            <span class="logo-symbol">
+                V
+            </span>
+
+            <span class="logo-copy">
+
+                <strong>
+                    VYBE
+                </strong>
+
+                <small>
+                    LIVE EVENTS
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+        <nav class="desktop-nav">
+
+            <a href="index.html" class="nav-link active">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="eventdetails.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="experience.html" class="nav-link">
+                Experience
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+
+            <a href="404.html" class="header-search">
+                <span>⌕</span>
+                Search events
+            </a>
+
+
+            <!-- LOGIN POPUP BUTTON -->
+            <button
+                type="button"
+                class="header-login"
+                id="openLoginModal"
+            >
+                Sign In
+            </button>
+
+
+            <a
+                href="404.html"
+                class="header-ticket"
+            >
+                Get Tickets
+                <span>↗</span>
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div
+    class="mobile-overlay"
+    id="mobileOverlay"
+></div>
+
+
+<aside
+    class="mobile-drawer"
+    id="mobileDrawer"
+>
+
+    <div class="drawer-top">
+
+        <a
+            href="index.html"
+            class="drawer-logo"
+        >
+            VYBE
+        </a>
+
+
+        <button
+            id="drawerClose"
+            class="drawer-close"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="drawer-intro">
+
+        <span>
+            LIVE EVENTS PLATFORM
+        </span>
+
+        <p>
+            Discover experiences worth remembering.
+        </p>
+
+    </div>
+
+
+    <nav class="drawer-navigation">
+
+        <a href="index.html">
+            <span>01</span>
+            Home
+        </a>
+
+        <a href="about.html">
+            <span>02</span>
+            About VYBE
+        </a>
+
+        <a href="eventdetails.html">
+            <span>03</span>
+            Events
+        </a>
+
+        <a href="experience.html">
+            <span>04</span>
+            Experience
+        </a>
+
+        <a href="contact.html">
+            <span>05</span>
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="drawer-login">
+
+        <button
+            type="button"
+            id="mobileLoginButton"
+        >
+            Sign In
+            <span>↗</span>
+        </button>
+
+    </div>
+
+
+    <div class="drawer-bottom">
+
+        <small>
+            READY FOR YOUR NEXT NIGHT?
+        </small>
+
+        <a href="404.html">
+            Browse All Events →
+        </a>
+
+    </div>
+
+</aside>
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     EXPERIENCE HERO
+========================================================= -->
+
+<section class="experience-hero-section">
+
+    <!-- HERO IMAGE CAROUSEL -->
+
+    <div class="experience-hero-slider" id="experienceHeroSlider">
+
+
+        <!-- Slide 01 -->
+
+        <article
+            class="experience-slide active"
+            data-slide="0"
+        >
+
+            <img
+                src="assets/images/experience-01.webp"
+                alt="Live concert experience"
+                class="experience-slide-image"
+            >
+
+            <div class="experience-slide-overlay"></div>
+
+            <div class="experience-slide-number">
+                01
+            </div>
+
+        </article>
+
+
+        <!-- Slide 02 -->
+
+        <article
+            class="experience-slide"
+            data-slide="1"
+        >
+
+            <img
+                src="assets/images/experience-02.webp"
+                alt="Festival experience"
+                class="experience-slide-image"
+            >
+
+            <div class="experience-slide-overlay"></div>
+
+            <div class="experience-slide-number">
+                02
+            </div>
+
+        </article>
+
+
+        <!-- Slide 03 -->
+
+        <article
+            class="experience-slide"
+            data-slide="2"
+        >
+
+            <img
+                src="assets/images/experience-03.webp"
+                alt="Nightlife experience"
+                class="experience-slide-image"
+            >
+
+            <div class="experience-slide-overlay"></div>
+
+            <div class="experience-slide-number">
+                03
+            </div>
+
+        </article>
+
+
+        <!-- Slide 04 -->
+
+        <article
+            class="experience-slide"
+            data-slide="3"
+        >
+
+            <img
+                src="assets/images/experience-04.webp"
+                alt="Audience live event experience"
+                class="experience-slide-image"
+            >
+
+            <div class="experience-slide-overlay"></div>
+
+            <div class="experience-slide-number">
+                04
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="experience-hero-content">
+
+        <div class="experience-hero-top">
+
+            <span class="experience-eyebrow">
+                THE VYBE EXPERIENCE
+            </span>
+
+            <span class="experience-location">
+                CHENNAI / INDIA
+            </span>
+
+        </div>
+
+
+        <div class="experience-hero-main">
+
+            <p class="experience-hero-kicker">
+                MORE THAN A TICKET.
+            </p>
+
+            <h1>
+                FEEL THE
+                <span>MOMENT.</span>
+            </h1>
+
+            <p class="experience-hero-description">
+                Discover live music, electric crowds,
+                unforgettable venues and experiences
+                that stay with you long after the lights go out.
+            </p>
+
+        </div>
+
+
+        <!-- Hero Bottom -->
+
+        <div class="experience-hero-bottom">
+
+            <div class="experience-hero-meta">
+
+                <span>LIVE</span>
+                <span>LOUD</span>
+                <span>UNFORGETTABLE</span>
+
+            </div>
+
+
+            <!-- Carousel Controls -->
+
+            <div class="experience-carousel-controls">
+
+                <button
+                    type="button"
+                    id="experiencePrev"
+                    class="experience-carousel-btn"
+                    aria-label="Previous experience"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="experience-carousel-counter">
+
+                    <span id="experienceCurrent">
+                        01
+                    </span>
+
+                    <span class="counter-divider">
+                        /
+                    </span>
+
+                    <span>
+                        04
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="experienceNext"
+                    class="experience-carousel-btn"
+                    aria-label="Next experience"
+                >
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+
+        <div class="experience-carousel-progress">
+
+            <span id="experienceProgress"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="experience-intro-section">
+
+    <div class="container">
+
+        <div class="experience-intro-grid">
+
+            <div class="experience-section-label">
+                01 / THE IDEA
+            </div>
+
+            <div class="experience-intro-content">
+
+                <h2>
+                    EVENTS ARE NOT
+                    <span>JUST EVENTS.</span>
+                </h2>
+
+                <p>
+                    A great event starts before you enter the venue.
+                    It starts with the anticipation, the music,
+                    the people, the lights and the feeling that
+                    something memorable is about to happen.
+                </p>
+
+                <p>
+                    VYBE brings every part of that journey together
+                    into one seamless experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE PILLARS
+========================================================= -->
+
+<section class="experience-pillars-section">
+
+    <div class="container">
+
+        <div class="experience-section-heading">
+
+            <span class="experience-section-label">
+                02 / WHAT YOU FEEL
+            </span>
+
+            <h2>
+                BUILT AROUND
+                <span>THE MOMENT.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="experience-pillars-grid">
+
+            <article class="experience-pillar">
+
+                <span class="pillar-number">
+                    01
+                </span>
+
+                <div class="pillar-icon">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+
+                <h3>
+                    THE SOUND
+                </h3>
+
+                <p>
+                    From intimate acoustic sets to
+                    massive live concerts, discover
+                    sound that fills the room.
+                </p>
+
+                <a href="404.html">
+                    Explore Music
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <article class="experience-pillar">
+
+                <span class="pillar-number">
+                    02
+                </span>
+
+                <div class="pillar-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>
+                    THE ENERGY
+                </h3>
+
+                <p>
+                    Feel the crowd, the lights,
+                    the bass and the collective
+                    energy of thousands of people.
+                </p>
+
+                <a href="404.html">
+                    Feel The Energy
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+
+            <article class="experience-pillar">
+
+                <span class="pillar-number">
+                    03
+                </span>
+
+                <div class="pillar-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+
+                <h3>
+                    THE CROWD
+                </h3>
+
+                <p>
+                    Meet people who came for the
+                    same reason — to experience
+                    something unforgettable.
+                </p>
+
+                <a href="404.html">
+                    Find Your Crowd
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VISUAL STORY
+========================================================= -->
+
+<section class="experience-story-section">
+
+    <div class="experience-story-image">
+
+        <img
+            src="assets/images/experience-05.webp"
+            alt="VYBE live audience"
+        >
+
+    </div>
+
+
+    <div class="experience-story-content">
+
+        <span class="experience-section-label">
+            03 / IN THE CROWD
+        </span>
+
+        <h2>
+            ONE ROOM.
+            <span>THOUSANDS OF STORIES.</span>
+        </h2>
+
+        <p>
+            Every person arrives with their own story.
+            Everyone leaves with another one.
+        </p>
+
+        <div class="experience-story-stats">
+
+            <div>
+                <strong>12K+</strong>
+                <span>EVENT MOMENTS</span>
+            </div>
+
+            <div>
+                <strong>48+</strong>
+                <span>LIVE VENUES</span>
+            </div>
+
+            <div>
+                <strong>25+</strong>
+                <span>CITIES</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE JOURNEY
+========================================================= -->
+
+<section class="experience-journey-section">
+
+    <div class="container">
+
+        <div class="experience-section-heading">
+
+            <span class="experience-section-label">
+                04 / YOUR JOURNEY
+            </span>
+
+            <h2>
+                FROM DISCOVERY
+                <span>TO THE LAST SONG.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="experience-journey">
+
+            <article class="journey-step">
+
+                <span class="journey-number">
+                    01
+                </span>
+
+                <div class="journey-icon">
+                    <i class="fa-solid fa-compass"></i>
+                </div>
+
+                <h3>
+                    DISCOVER
+                </h3>
+
+                <p>
+                    Find concerts, festivals,
+                    comedy nights and experiences
+                    happening around you.
+                </p>
+
+            </article>
+
+
+            <article class="journey-step">
+
+                <span class="journey-number">
+                    02
+                </span>
+
+                <div class="journey-icon">
+                    <i class="fa-solid fa-ticket"></i>
+                </div>
+
+                <h3>
+                    BOOK
+                </h3>
+
+                <p>
+                    Choose your event, select your
+                    ticket and get ready for the night.
+                </p>
+
+            </article>
+
+
+            <article class="journey-step">
+
+                <span class="journey-number">
+                    03
+                </span>
+
+                <div class="journey-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <h3>
+                    ARRIVE
+                </h3>
+
+                <p>
+                    Walk into the venue and let
+                    the atmosphere take over.
+                </p>
+
+            </article>
+
+
+            <article class="journey-step">
+
+                <span class="journey-number">
+                    04
+                </span>
+
+                <div class="journey-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <h3>
+                    REMEMBER
+                </h3>
+
+                <p>
+                    Leave with memories that
+                    stay long after the event ends.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE TYPES
+========================================================= -->
+
+<section class="experience-types-section">
+
+    <div class="container">
+
+        <div class="experience-types-header">
+
+            <span class="experience-section-label">
+                05 / CHOOSE YOUR VYBE
+            </span>
+
+            <h2>
+                EVERY MOOD.
+                <span>ONE PLATFORM.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="experience-types-grid">
+
+            <a href="404.html" class="experience-type-card">
+
+                <div class="type-image">
+                    <img
+                        src="assets/images/event-01.webp"
+                        alt="Live music"
+                    >
+                </div>
+
+                <div class="type-content">
+                    <span>01</span>
+                    <h3>LIVE MUSIC</h3>
+                    <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+
+            </a>
+
+
+            <a href="404.html" class="experience-type-card">
+
+                <div class="type-image">
+                    <img
+                        src="assets/images/event-02.webp"
+                        alt="Festivals"
+                    >
+                </div>
+
+                <div class="type-content">
+                    <span>02</span>
+                    <h3>FESTIVALS</h3>
+                    <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+
+            </a>
+
+
+            <a href="404.html" class="experience-type-card">
+
+                <div class="type-image">
+                    <img
+                        src="assets/images/event-03.webp"
+                        alt="Comedy"
+                    >
+                </div>
+
+                <div class="type-content">
+                    <span>03</span>
+                    <h3>COMEDY</h3>
+                    <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+
+            </a>
+
+
+            <a href="404.html" class="experience-type-card">
+
+                <div class="type-image">
+                    <img
+                        src="assets/images/event-04.webp"
+                        alt="Nightlife"
+                    >
+                </div>
+
+                <div class="type-content">
+                    <span>04</span>
+                    <h3>NIGHTLIFE</h3>
+                    <i class="fa-solid fa-arrow-up-right"></i>
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="experience-final-section">
+
+    <div class="experience-final-background">
+
+        <img
+            src="assets/images/experience-06.webp"
+            alt="VYBE event crowd"
+        >
+
+    </div>
+
+    <div class="experience-final-overlay"></div>
+
+
+    <div class="container">
+
+        <div class="experience-final-content">
+
+            <span class="experience-section-label">
+                06 / YOUR NEXT MOMENT
+            </span>
+
+            <h2>
+                DON'T JUST
+                <span>WATCH.</span>
+                EXPERIENCE IT.
+            </h2>
+
+            <p>
+                Your next unforgettable moment
+                could be one ticket away.
+            </p>
+
+            <div class="experience-final-actions">
+
+                <a href="404.html" class="primary-button">
+                    Explore Events
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="404.html" class="secondary-button">
+                    Browse Experiences
+                    <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<!-- =========================================================
+     VYBE — FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand-logo footer-logo">
+                    <img src="assets/logo.webp" alt="VYBE Logo">
+                </a>
+
+                <p>
+                    Discover live events, unforgettable
+                    experiences and moments worth remembering.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="404.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="404.html" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="404.html" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="404.html" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h4>
+                    QUICK LINKS
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="eventdetails.html">
+                    Events
+                </a>
+
+                <a href="experience.html">
+                    Experience
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- DISCOVER -->
+            <div class="footer-column">
+
+                <h4>
+                    DISCOVER
+                </h4>
+
+                <a href="eventdetails.html">
+                    Live Events
+                </a>
+
+                <a href="eventdetails.html">
+                    Concerts
+                </a>
+
+                <a href="eventdetails.html">
+                    Festivals
+                </a>
+
+                <a href="eventdetails.html">
+                    Trending Events
+                </a>
+
+                <a href="404.html">
+                    Upcoming Shows
+                </a>
+
+            </div>
+
+
+            <!-- SUPPORT -->
+            <div class="footer-column">
+
+                <h4>
+                    SUPPORT
+                </h4>
+
+                <a href="404.html">
+                    Help Center
+                </a>
+
+                <a href="404.html">
+                    Ticket Guide
+                </a>
+
+                <a href="404.html">
+                    Booking Support
+                </a>
+
+                <a href="404.html">
+                    Refund Policy
+                </a>
+
+                <a href="404.html">
+                    FAQs
+                </a>
+
+            </div>
+
+
+            <!-- NEWSLETTER -->
+            <div class="footer-newsletter">
+
+                <h4>
+                    STAY IN THE VYBE
+                </h4>
+
+                <p>
+                    Get the latest events, exclusive drops,
+                    ticket alerts and unforgettable experiences
+                    straight to your inbox.
+                </p>
+
+                <form id="newsletterForm">
+
+                    <div class="newsletter-input">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            placeholder="Your email address"
+                            aria-label="Email address"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            aria-label="Subscribe"
+                        >
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                    <small id="newsletterMessage"></small>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 VYBE. All rights reserved.
+            </span>
+
+            <div>
+
+                <a href="404.html">
+                    Privacy Policy
+                </a>
+
+                <a href="404.html">
+                    Terms
+                </a>
+
+                <a href="404.html">
+                    Cookie Policy
+                </a>
+
+                <a href="404.html">
+                    Security
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     VYBE LOGIN MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="loginModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="login-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="loginTitle"
+    >
+
+        <!-- CLOSE -->
+        <button
+            type="button"
+            class="modal-close"
+            id="loginModalClose"
+            aria-label="Close login"
+        >
+            ×
+        </button>
+
+
+        <!-- =================================================
+             LOGIN VISUAL
+        ================================================== -->
+
+        <div class="login-visual">
+
+            <img
+                src="assets/images/login.webp"
+                alt="VYBE live event experience"
+            >
+
+            <div class="login-visual-overlay"></div>
+
+
+            <div class="login-visual-content">
+
+                <span>
+                    VYBE LIVE EVENTS
+                </span>
+
+                <h3>
+                    Your next
+                    <br>
+                    unforgettable night
+                    <br>
+                    starts here.
+                </h3>
+
+
+                <div class="login-event-badge">
+
+                    <span class="live-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            LIVE EXPERIENCES
+                        </strong>
+
+                        <small>
+                            Concerts · Festivals · Culture
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="login-visual-footer">
+
+                <span>
+                    DISCOVER
+                </span>
+
+                <i></i>
+
+                <span>
+                    CHOOSE
+                </span>
+
+                <i></i>
+
+                <span>
+                    EXPERIENCE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LOGIN CONTENT
+        ================================================== -->
+
+        <div class="login-content">
+
+            <div class="login-heading">
+
+                <span>
+                    WELCOME TO VYBE
+                </span>
+
+                <h2 id="loginTitle">
+                    Sign in to continue
+                </h2>
+
+                <p>
+                    Access your tickets, events and
+                    personalised VYBE experience.
+                </p>
+
+            </div>
+
+
+            <!-- TABS -->
+
+            <div class="login-tabs">
+
+                <button
+                    type="button"
+                    class="login-tab active"
+                    data-login-tab="user"
+                >
+                    User Login
+                </button>
+
+                <button
+                    type="button"
+                    class="login-tab"
+                    data-login-tab="admin"
+                >
+                    Admin Login
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 USER LOGIN
+            ================================================== -->
+
+            <form
+                class="login-form active"
+                id="userLoginForm"
+                data-login-form="user"
+            >
+
+                <label for="userEmail">
+                    Email Address
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        @
+                    </span>
+
+                    <input
+                        type="email"
+                        id="userEmail"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <label for="userPassword">
+                    Password
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        •
+                    </span>
+
+                    <input
+                        type="password"
+                        id="userPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-password-toggle="userPassword"
+                        aria-label="Show password"
+                    >
+                        <span>◉</span>
+                    </button>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input
+                            type="checkbox"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a href="404.html">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-submit"
+                >
+
+                    <span>
+                        Enter VYBE
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+
+                <p class="login-create">
+
+                    New to VYBE?
+
+                    <a href="404.html">
+                        Create an account
+                    </a>
+
+                </p>
+
+            </form>
+
+
+            <!-- =================================================
+                 ADMIN LOGIN
+            ================================================== -->
+
+            <form
+                class="login-form"
+                id="adminLoginForm"
+                data-login-form="admin"
+            >
+
+                <label for="adminEmail">
+                    Admin Email
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        @
+                    </span>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="admin@vybe.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <label for="adminPassword">
+                    Admin Password
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        #
+                    </span>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter admin password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-password-toggle="adminPassword"
+                        aria-label="Show password"
+                    >
+                        <span>◉</span>
+                    </button>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input
+                            type="checkbox"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a href="404.html">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-submit admin-submit"
+                >
+
+                    <span>
+                        Open Admin Panel
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <div class="login-security">
+
+                <span class="security-icon">
+                    ✓
+                </span>
+
+                <span>
+                    Secure VYBE session · Live event platform
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================================================
+     EXPERIENCE CAROUSEL JS
+========================================================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const slides = document.querySelectorAll(".experience-slide");
+    const nextButton = document.getElementById("experienceNext");
+    const prevButton = document.getElementById("experiencePrev");
+    const currentNumber = document.getElementById("experienceCurrent");
+    const progress = document.getElementById("experienceProgress");
+
+    if (!slides.length) return;
+
+    let currentIndex = 0;
+    let autoPlay;
+    const duration = 5500;
+
+
+    function updateCarousel(index) {
+
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+
+        currentNumber.textContent =
+            String(index + 1).padStart(2, "0");
+
+        if (progress) {
+
+            progress.style.transition = "none";
+            progress.style.width = "0%";
+
+            requestAnimationFrame(() => {
+
+                requestAnimationFrame(() => {
+
+                    progress.style.transition =
+                        `width ${duration}ms linear`;
+
+                    progress.style.width = "100%";
+
+                });
+
+            });
+
+        }
+
+    }
+
+
+    function nextSlide() {
+
+        currentIndex =
+            (currentIndex + 1) % slides.length;
+
+        updateCarousel(currentIndex);
+
+        restartAutoPlay();
+
+    }
+
+
+    function previousSlide() {
+
+        currentIndex =
+            (currentIndex - 1 + slides.length)
+            % slides.length;
+
+        updateCarousel(currentIndex);
+
+        restartAutoPlay();
+
+    }
+
+
+    function startAutoPlay() {
+
+        clearInterval(autoPlay);
+
+        autoPlay = setInterval(() => {
+
+            currentIndex =
+                (currentIndex + 1) % slides.length;
+
+            updateCarousel(currentIndex);
+
+        }, duration);
+
+    }
+
+
+    function restartAutoPlay() {
+
+        startAutoPlay();
+
+    }
+
+
+    nextButton?.addEventListener(
+        "click",
+        nextSlide
+    );
+
+    prevButton?.addEventListener(
+        "click",
+        previousSlide
+    );
+
+
+    /* Keyboard controls */
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "ArrowRight") {
+            nextSlide();
+        }
+
+        if (event.key === "ArrowLeft") {
+            previousSlide();
+        }
+
+    });
+
+
+    /* Pause while hovering */
+
+    const slider =
+        document.getElementById("experienceHeroSlider");
+
+    slider?.addEventListener("mouseenter", () => {
+        clearInterval(autoPlay);
+    });
+
+    slider?.addEventListener("mouseleave", () => {
+        startAutoPlay();
+    });
+
+
+    /* Initial state */
+
+    updateCarousel(currentIndex);
+    startAutoPlay();
+
+});
+</script>
+
+
+<!-- =========================================================
+     MAIN JS
+========================================================= -->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

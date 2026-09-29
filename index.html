@@ -1,0 +1,2804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VYBE — Live Events. Unforgettable Moments.</title>
+
+    <meta
+        name="description"
+        content="Discover concerts, festivals, comedy, sports and unforgettable live experiences with VYBE."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     CUSTOM MIC CURSOR
+========================================================= -->
+
+<div class="mic-cursor" id="micCursor">
+    <span class="mic-cursor-ring"></span>
+    <span class="mic-cursor-icon">🎙</span>
+</div>
+
+
+<!-- =========================================================
+     SCROLL PROGRESS
+========================================================= -->
+
+<div class="scroll-progress">
+    <span id="scrollProgress"></span>
+</div>
+
+
+<!-- =========================================================
+     PRELOADER
+========================================================= -->
+
+<div class="preloader" id="preloader">
+
+    <div class="preloader-noise"></div>
+
+    <div class="preloader-inner">
+
+        <div class="preloader-brand">
+
+            <span class="preloader-brand-mark">
+                V
+            </span>
+
+            <div>
+                <strong>VYBE</strong>
+                <small>LIVE EVENTS PLATFORM</small>
+            </div>
+
+        </div>
+
+
+        <div class="drum-animation">
+
+            <div class="drum-unit drum-left">
+
+                <div class="drum-shell">
+                    <div class="drum-top"></div>
+                    <div class="drum-rim"></div>
+                    <div class="drum-line"></div>
+                </div>
+
+                <div class="drum-stick stick-left"></div>
+
+            </div>
+
+
+            <div class="drum-center">
+
+                <span>FEEL</span>
+                <strong>THE BEAT</strong>
+
+            </div>
+
+
+            <div class="drum-unit drum-right">
+
+                <div class="drum-shell">
+                    <div class="drum-top"></div>
+                    <div class="drum-rim"></div>
+                    <div class="drum-line"></div>
+                </div>
+
+                <div class="drum-stick stick-right"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="preloader-ticket" id="ticketLoader">
+
+            <div class="ticket-perforation"></div>
+
+            <div class="ticket-content">
+
+                <div class="ticket-head">
+
+                    <span>VYBE LIVE</span>
+
+                    <span>
+                        2026
+                    </span>
+
+                </div>
+
+                <strong>
+                    ADMIT ONE
+                </strong>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-info">
+
+                    <span>
+                        LIVE EXPERIENCE
+                    </span>
+
+                    <span>
+                        ENTRY
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="loader-status">
+
+            <strong>
+                <span id="loaderPercent">0</span>%
+            </strong>
+
+            <span>
+                PREPARING YOUR EXPERIENCE
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<header class="site-header" id="siteHeader">
+
+    <div class="header-inner">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+
+            <span class="logo-symbol">
+                V
+            </span>
+
+            <span class="logo-copy">
+
+                <strong>
+                    VYBE
+                </strong>
+
+                <small>
+                    LIVE EVENTS
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAV -->
+        <nav class="desktop-nav">
+
+            <a href="index.html" class="nav-link active">
+                Home
+            </a>
+
+            <a href="about.html" class="nav-link">
+                About
+            </a>
+
+            <a href="eventdetails.html" class="nav-link">
+                Events
+            </a>
+
+            <a href="experience.html" class="nav-link">
+                Experience
+            </a>
+
+            <a href="contact.html" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+
+            <a href="404.html" class="header-search">
+                <span>⌕</span>
+                Search events
+            </a>
+
+
+            <!-- LOGIN POPUP BUTTON -->
+            <button
+                type="button"
+                class="header-login"
+                id="openLoginModal"
+            >
+                Sign In
+            </button>
+
+
+            <a
+                href="404.html"
+                class="header-ticket"
+            >
+                Get Tickets
+                <span>↗</span>
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+            >
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div
+    class="mobile-overlay"
+    id="mobileOverlay"
+></div>
+
+
+<aside
+    class="mobile-drawer"
+    id="mobileDrawer"
+>
+
+    <div class="drawer-top">
+
+        <a
+            href="index.html"
+            class="drawer-logo"
+        >
+            VYBE
+        </a>
+
+
+        <button
+            id="drawerClose"
+            class="drawer-close"
+            aria-label="Close navigation"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div class="drawer-intro">
+
+        <span>
+            LIVE EVENTS PLATFORM
+        </span>
+
+        <p>
+            Discover experiences worth remembering.
+        </p>
+
+    </div>
+
+
+    <nav class="drawer-navigation">
+
+        <a href="index.html">
+            <span>01</span>
+            Home
+        </a>
+
+        <a href="about.html">
+            <span>02</span>
+            About VYBE
+        </a>
+
+        <a href="eventdetails.html">
+            <span>03</span>
+            Events
+        </a>
+
+        <a href="experience.html">
+            <span>04</span>
+            Experience
+        </a>
+
+        <a href="contact.html">
+            <span>05</span>
+            Contact
+        </a>
+
+    </nav>
+
+
+    <div class="drawer-login">
+
+        <button
+            type="button"
+            id="mobileLoginButton"
+        >
+            Sign In
+            <span>↗</span>
+        </button>
+
+    </div>
+
+
+    <div class="drawer-bottom">
+
+        <small>
+            READY FOR YOUR NEXT NIGHT?
+        </small>
+
+        <a href="404.html">
+            Browse All Events →
+        </a>
+
+    </div>
+
+</aside>
+
+<main>
+
+
+<!-- =========================================================
+     SECTION 01 — CINEMATIC HERO
+========================================================= -->
+
+<section class="hero-section" id="home">
+
+    <div class="hero-background">
+
+        <div class="hero-light hero-light-one"></div>
+        <div class="hero-light hero-light-two"></div>
+        <div class="hero-light hero-light-three"></div>
+
+        <div class="hero-grid"></div>
+
+        <div class="hero-grain"></div>
+
+    </div>
+
+
+    <div class="hero-topline">
+
+        <div class="hero-location">
+
+            <span class="live-dot"></span>
+
+            <span>
+                LIVE EXPERIENCES
+            </span>
+
+        </div>
+
+        <span>
+            CHENNAI · BENGALURU · MUMBAI · DELHI
+        </span>
+
+    </div>
+
+
+    <div class="hero-main">
+
+        <div class="hero-editorial">
+
+            <span class="eyebrow">
+
+                <i></i>
+
+                THE STAGE IS CALLING
+
+            </span>
+
+
+            <h1>
+
+                Don't just
+                <br>
+
+                <span>attend.</span>
+
+                <br>
+
+                <em>experience it.</em>
+
+            </h1>
+
+
+            <p>
+
+                Discover the artists, concerts, festivals and
+                cultural experiences that turn an ordinary night
+                into a memory you'll keep coming back to.
+
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="404.html"
+                    class="hero-primary-button"
+                >
+
+                    Explore Events
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a
+                    href="404.html"
+                    class="hero-secondary-button"
+                >
+
+                    How VYBE Works
+
+                    <span>▶</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-trust">
+
+                <div>
+
+                    <strong>
+                        250+
+                    </strong>
+
+                    <span>
+                        LIVE EVENTS
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        85+
+                    </strong>
+
+                    <span>
+                        ARTISTS
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        24/7
+                    </strong>
+
+                    <span>
+                        DISCOVERY
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CENTER ARTIST STAGE
+        ================================================== -->
+
+        <div class="artist-stage" id="artistStage">
+
+            <div class="stage-orbit orbit-one"></div>
+            <div class="stage-orbit orbit-two"></div>
+
+            <div class="artist-light-behind"></div>
+
+            <div class="artist-image-container">
+
+                <img
+                    src="assets/images/anirudh.png"
+                    alt="Anirudh Ravichander"
+                    class="artist-image active"
+                    data-index="0"
+                >
+
+                <img
+                    src="assets/images/yuvan.png"
+                    alt="Yuvan Shankar Raja"
+                    class="artist-image"
+                    data-index="1"
+                >
+
+                <img
+                    src="assets/images/hiphop-tamizha.png"
+                    alt="Hiphop Tamizha"
+                    class="artist-image"
+                    data-index="2"
+                >
+
+                <img
+                    src="assets/images/jonita-gandhi.png"
+                    alt="Jonita Gandhi"
+                    class="artist-image"
+                    data-index="3"
+                >
+
+            </div>
+
+            <div class="artist-ground-shadow"></div>
+
+
+            <div class="floating-stage-card card-location">
+
+                <span>
+                    NEXT STOP
+                </span>
+
+                <strong>
+                    CHENNAI
+                </strong>
+
+            </div>
+
+
+            <div class="floating-stage-card card-live">
+
+                <span class="live-dot"></span>
+
+                LIVE
+                EXPERIENCE
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ARTIST DETAILS
+    ====================================================== -->
+
+    <div class="artist-information">
+
+        <div class="artist-index">
+
+            <strong id="artistNumber">
+                01
+            </strong>
+
+            <span>
+                /
+            </span>
+
+            <span>
+                04
+            </span>
+
+        </div>
+
+
+        <div class="artist-primary">
+
+            <span class="artist-category" id="artistCategory">
+                LIVE CONCERT
+            </span>
+
+            <h2 id="artistName">
+                Anirudh Ravichander
+            </h2>
+
+            <p id="artistDescription">
+
+                A high-energy live performance built around
+                powerful rhythms, cinematic sounds and an
+                audience that never stops moving.
+
+            </p>
+
+        </div>
+
+
+        <div class="artist-details-grid">
+
+            <div>
+
+                <small>
+                    DATE
+                </small>
+
+                <strong id="artistDate">
+                    18 OCT 2026
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    VENUE
+                </small>
+
+                <strong id="artistVenue">
+                    CHENNAI ARENA
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    CITY
+                </small>
+
+                <strong id="artistCity">
+                    CHENNAI
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <small>
+                    TICKETS FROM
+                </small>
+
+                <strong id="artistPrice">
+                    ₹999
+                </strong>
+
+            </div>
+
+
+            <a
+                href="404.html"
+                class="artist-ticket-button"
+            >
+
+                Get Tickets
+
+                <span>↗</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HERO CONTROLS
+    ====================================================== -->
+
+    <div class="hero-controls">
+
+        <button
+            id="artistPrev"
+            class="artist-control"
+            aria-label="Previous artist"
+        >
+            ←
+        </button>
+
+
+        <div class="artist-progress">
+
+            <div class="progress-label">
+
+                <span>
+                    NOW PLAYING
+                </span>
+
+                <span id="progressPercent">
+                    25%
+                </span>
+
+            </div>
+
+            <div class="progress-track">
+
+                <span id="artistProgress"></span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="artistNext"
+            class="artist-control"
+            aria-label="Next artist"
+        >
+            →
+        </button>
+
+    </div>
+
+
+    <div class="hero-scroll-indicator">
+
+        <span>
+            SCROLL TO DISCOVER
+        </span>
+
+        <div class="scroll-line">
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 02 — DISCOVER EVENTS
+========================================================= -->
+
+<section class="discover-section section-light" id="events">
+
+    <div class="container">
+
+        <div class="section-heading split-heading reveal">
+
+            <div>
+
+                <span class="section-kicker">
+                    02 / DISCOVER
+                </span>
+
+                <h2>
+                    The events
+                    <br>
+                    <em>worth leaving home for.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="heading-side">
+
+                <p>
+
+                    From sold-out concerts to intimate
+                    cultural experiences, discover what's
+                    happening across the city.
+
+                </p>
+
+                <a href="404.html" class="text-arrow">
+                    Explore all events →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FEATURED EVENT -->
+
+        <div class="featured-event reveal">
+
+            <div class="featured-event-image">
+
+                <img
+                    src="assets/images/event-01.webp"
+                    alt="Featured live concert"
+                    loading="lazy"
+                >
+
+                <div class="image-gradient"></div>
+
+
+                <div class="featured-badge">
+
+                    <span class="live-dot"></span>
+
+                    FEATURED EVENT
+
+                </div>
+
+
+                <div class="featured-image-copy">
+
+                    <span>
+                        LIVE · MUSIC · 2026
+                    </span>
+
+                    <h3>
+                        The Sound
+                        <br>
+                        Of The City
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="featured-event-info">
+
+                <div class="event-top-meta">
+
+                    <span>
+                        OCTOBER 18, 2026
+                    </span>
+
+                    <span>
+                        CHENNAI
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Anirudh
+                    <br>
+                    Live Experience
+                </h3>
+
+
+                <p>
+
+                    A night designed around sound, energy
+                    and an atmosphere that feels bigger than
+                    the stage itself.
+
+                </p>
+
+
+                <div class="event-info-list">
+
+                    <div>
+
+                        <span>
+                            VENUE
+                        </span>
+
+                        <strong>
+                            Chennai Arena
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            DOORS OPEN
+                        </span>
+
+                        <strong>
+                            6:00 PM
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            TICKETS
+                        </span>
+
+                        <strong>
+                            From ₹999
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <a href="404.html" class="dark-button">
+
+                    View Event Details
+
+                    <span>↗</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- EVENT CARDS -->
+
+        <div class="event-grid">
+
+            <article class="event-card reveal">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="assets/images/event-02.webp"
+                        alt="Music festival"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        MUSIC FESTIVAL
+                    </span>
+
+                </div>
+
+                <div class="event-card-body">
+
+                    <div class="event-card-meta">
+
+                        <span>
+                            NOV 08
+                        </span>
+
+                        <span>
+                            BENGALURU
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Soundscape Festival
+                    </h3>
+
+                    <p>
+                        Multiple artists. One massive stage.
+                        A full day built around music.
+                    </p>
+
+                    <a href="404.html">
+                        Discover event →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="event-card reveal">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="assets/images/event-03.webp"
+                        alt="Yuvan live performance"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        LIVE MUSIC
+                    </span>
+
+                </div>
+
+                <div class="event-card-body">
+
+                    <div class="event-card-meta">
+
+                        <span>
+                            NOV 22
+                        </span>
+
+                        <span>
+                            CHENNAI
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Yuvan Live
+                    </h3>
+
+                    <p>
+                        Timeless melodies, live instrumentation
+                        and an evening made for music lovers.
+                    </p>
+
+                    <a href="404.html">
+                        Discover event →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="event-card reveal">
+
+                <div class="event-card-image">
+
+                    <img
+                        src="assets/images/event-04.webp"
+                        alt="Hiphop Tamizha concert"
+                        loading="lazy"
+                    >
+
+                    <span>
+                        CONCERT
+                    </span>
+
+                </div>
+
+                <div class="event-card-body">
+
+                    <div class="event-card-meta">
+
+                        <span>
+                            DEC 04
+                        </span>
+
+                        <span>
+                            CHENNAI
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Hiphop Tamizha
+                    </h3>
+
+                    <p>
+                        Rhythm, culture and a high-voltage
+                        live performance.
+                    </p>
+
+                    <a href="404.html">
+                        Discover event →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 03 — CATEGORIES
+========================================================= -->
+
+<section class="categories-section section-dark" id="categories">
+
+    <div class="container">
+
+        <div class="category-header reveal">
+
+            <span class="section-kicker">
+                03 / EXPLORE YOUR VYBE
+            </span>
+
+            <h2>
+                Whatever moves you,
+                <em>it's happening.</em>
+            </h2>
+
+            <p>
+
+                Browse experiences by mood, interest and
+                the kind of night you're looking for.
+
+            </p>
+
+        </div>
+
+
+        <div class="category-layout">
+
+            <div class="category-feature reveal">
+
+                <div class="category-feature-number">
+                    01
+                </div>
+
+                <div>
+
+                    <span>
+                        MOST POPULAR
+                    </span>
+
+                    <h3>
+                        Live
+                        <br>
+                        Concerts
+                    </h3>
+
+                    <p>
+
+                        Experience your favourite artists
+                        where the music sounds different
+                        because you're there.
+
+                    </p>
+
+                </div>
+
+                <a href="404.html">
+                    Explore concerts ↗
+                </a>
+
+            </div>
+
+
+            <div class="category-stack">
+
+                <a href="404.html" class="category-row reveal">
+
+                    <span class="category-number">
+                        02
+                    </span>
+
+                    <div class="category-row-content">
+
+                        <span>
+                            MULTI-ARTIST
+                        </span>
+
+                        <h3>
+                            Music Festivals
+                        </h3>
+
+                        <p>
+                            Full-day stages, artists and
+                            unforgettable crowd energy.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </a>
+
+
+                <a href="404.html" class="category-row reveal">
+
+                    <span class="category-number">
+                        03
+                    </span>
+
+                    <div class="category-row-content">
+
+                        <span>
+                            LAUGH OUT LOUD
+                        </span>
+
+                        <h3>
+                            Comedy
+                        </h3>
+
+                        <p>
+                            Stand-up nights and live comedy
+                            experiences.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </a>
+
+
+                <a href="404.html" class="category-row reveal">
+
+                    <span class="category-number">
+                        04
+                    </span>
+
+                    <div class="category-row-content">
+
+                        <span>
+                            GAME DAY
+                        </span>
+
+                        <h3>
+                            Sports
+                        </h3>
+
+                        <p>
+                            Stadium atmosphere, competition
+                            and moments that matter.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </a>
+
+
+                <a href="404.html" class="category-row reveal">
+
+                    <span class="category-number">
+                        05
+                    </span>
+
+                    <div class="category-row-content">
+
+                        <span>
+                            CULTURE
+                        </span>
+
+                        <h3>
+                            Arts & Theatre
+                        </h3>
+
+                        <p>
+                            Stories, performances and creative
+                            experiences.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        ↗
+                    </strong>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 04 — TRENDING NOW
+========================================================= -->
+
+<section class="trending-section">
+
+    <div class="container">
+
+        <div class="trending-heading reveal">
+
+            <div>
+
+                <span class="section-kicker">
+                    04 / TRENDING NOW
+                </span>
+
+                <h2>
+                    Everyone's
+                    <em>talking about it.</em>
+                </h2>
+
+            </div>
+
+            <div class="trending-status">
+
+                <span class="live-dot"></span>
+
+                UPDATED TODAY
+
+            </div>
+
+        </div>
+
+
+        <div class="trending-layout">
+
+
+            <div class="trending-main reveal">
+
+                <div class="trending-image">
+
+                    <img
+                        src="assets/images/event-05.webp"
+                        alt="Live audience"
+                        loading="lazy"
+                    >
+
+                    <div class="trending-image-overlay"></div>
+
+                    <div class="trending-rank">
+                        #01
+                    </div>
+
+                    <div class="trending-main-info">
+
+                        <span>
+                            MOST BOOKED THIS WEEK
+                        </span>
+
+                        <h3>
+                            Hiphop Tamizha
+                            Live Experience
+                        </h3>
+
+                        <div>
+
+                            <span>
+                                DEC 04 · CHENNAI
+                            </span>
+
+                            <a href="404.html">
+                                View event →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="trending-list">
+
+                <article class="trend-item reveal">
+
+                    <div class="trend-number">
+                        02
+                    </div>
+
+                    <div class="trend-content">
+
+                        <span>
+                            DEC 12 · BENGALURU
+                        </span>
+
+                        <h3>
+                            Indie Nights
+                        </h3>
+
+                        <p>
+                            New sounds. Independent artists.
+                            One intimate stage.
+                        </p>
+
+                    </div>
+
+                    <a href="404.html">
+                        ↗
+                    </a>
+
+                </article>
+
+
+                <article class="trend-item reveal">
+
+                    <div class="trend-number">
+                        03
+                    </div>
+
+                    <div class="trend-content">
+
+                        <span>
+                            DEC 19 · MUMBAI
+                        </span>
+
+                        <h3>
+                            City Music Fest
+                        </h3>
+
+                        <p>
+                            A city-wide celebration of
+                            contemporary music.
+                        </p>
+
+                    </div>
+
+                    <a href="404.html">
+                        ↗
+                    </a>
+
+                </article>
+
+
+                <article class="trend-item reveal">
+
+                    <div class="trend-number">
+                        04
+                    </div>
+
+                    <div class="trend-content">
+
+                        <span>
+                            JAN 08 · CHENNAI
+                        </span>
+
+                        <h3>
+                            Jonita Gandhi Live
+                        </h3>
+
+                        <p>
+                            An evening of powerful vocals
+                            and unforgettable melodies.
+                        </p>
+
+                    </div>
+
+                    <a href="404.html">
+                        ↗
+                    </a>
+
+                </article>
+
+
+                <article class="trend-item reveal">
+
+                    <div class="trend-number">
+                        05
+                    </div>
+
+                    <div class="trend-content">
+
+                        <span>
+                            JAN 16 · DELHI
+                        </span>
+
+                        <h3>
+                            The Midnight Sessions
+                        </h3>
+
+                        <p>
+                            A late-night electronic music
+                            experience.
+                        </p>
+
+                    </div>
+
+                    <a href="404.html">
+                        ↗
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 05 — HOW VYBE WORKS
+========================================================= -->
+
+<section class="how-section section-cream">
+
+    <div class="container">
+
+        <div class="how-heading reveal">
+
+            <span class="section-kicker">
+                05 / HOW IT WORKS
+            </span>
+
+            <h2>
+                Less searching.
+                <br>
+                <em>More experiencing.</em>
+            </h2>
+
+            <p>
+
+                We keep the journey from discovering an event
+                to stepping through the venue doors simple.
+
+            </p>
+
+        </div>
+
+
+        <div class="how-process">
+
+            <div class="how-card reveal">
+
+                <div class="how-card-top">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div class="how-icon">
+                        ◉
+                    </div>
+
+                </div>
+
+                <h3>
+                    Discover
+                </h3>
+
+                <p>
+
+                    Explore handpicked events based on your
+                    city, interests and the experiences you
+                    don't want to miss.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Curated event discovery
+                    </li>
+
+                    <li>
+                        City-based browsing
+                    </li>
+
+                    <li>
+                        Artist-led recommendations
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="how-connector">
+                →
+            </div>
+
+
+            <div class="how-card reveal">
+
+                <div class="how-card-top">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div class="how-icon">
+                        ◇
+                    </div>
+
+                </div>
+
+                <h3>
+                    Choose
+                </h3>
+
+                <p>
+
+                    Compare dates, venues, ticket categories
+                    and available experiences before you decide.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Clear ticket categories
+                    </li>
+
+                    <li>
+                        Transparent pricing
+                    </li>
+
+                    <li>
+                        Event information at a glance
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="how-connector">
+                →
+            </div>
+
+
+            <div class="how-card reveal">
+
+                <div class="how-card-top">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div class="how-icon">
+                        ✓
+                    </div>
+
+                </div>
+
+                <h3>
+                    Book
+                </h3>
+
+                <p>
+
+                    Secure your place and keep your digital
+                    ticket ready for the moment you arrive.
+
+                </p>
+
+                <ul>
+
+                    <li>
+                        Digital-first tickets
+                    </li>
+
+                    <li>
+                        Easy event access
+                    </li>
+
+                    <li>
+                        Booking confirmation
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="how-note reveal">
+
+            <span>
+                VYBE PROMISE
+            </span>
+
+            <strong>
+                Your ticket should never get in the way
+                of your experience.
+            </strong>
+
+            <a href="404.html">
+                Learn more →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 06 — EXPERIENCE
+========================================================= -->
+
+<section class="experience-section section-dark">
+
+    <div class="container">
+
+        <div class="experience-top reveal">
+
+            <div>
+
+                <span class="section-kicker">
+                    06 / THE VYBE EXPERIENCE
+                </span>
+
+                <h2>
+                    The ticket is
+                    <em>just the beginning.</em>
+                </h2>
+
+            </div>
+
+            <p>
+
+                Every part of VYBE is designed around one
+                simple idea — the best events deserve an
+                experience that feels just as considered.
+
+            </p>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+            <div class="experience-image reveal">
+
+                <img
+                    src="assets/images/event-06.webp"
+                    alt="Audience at a live experience"
+                    loading="lazy"
+                >
+
+                <div class="experience-image-label">
+
+                    <span>
+                        LIVE
+                    </span>
+
+                    <strong>
+                        FEEL THE MOMENT
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="experience-features">
+
+                <article class="experience-feature reveal">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Discover something new
+                        </h3>
+
+                        <p>
+                            Go beyond the events you already know.
+                            Find emerging artists, new venues and
+                            experiences happening around you.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="experience-feature reveal">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Know before you go
+                        </h3>
+
+                        <p>
+                            Dates, venue information, ticket types,
+                            timings and event details stay clear
+                            from discovery to entry.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="experience-feature reveal">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Keep your night moving
+                        </h3>
+
+                        <p>
+                            Digital-first ticketing keeps your
+                            booking close and your focus where
+                            it belongs — on the experience.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="experience-feature reveal">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Remember the moment
+                        </h3>
+
+                        <p>
+                            Because the best event isn't measured
+                            by the ticket you bought, but by what
+                            you felt when the lights came on.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <div class="experience-bottom reveal">
+
+            <div>
+
+                <strong>
+                    12K+
+                </strong>
+
+                <span>
+                    TICKETS DISCOVERED
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    250+
+                </strong>
+
+                <span>
+                    EVENTS LISTED
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    85+
+                </strong>
+
+                <span>
+                    ARTISTS
+                </span>
+
+            </div>
+
+            <div>
+
+                <strong>
+                    18
+                </strong>
+
+                <span>
+                    CITIES
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 07 — COMMUNITY / TRUST
+========================================================= -->
+
+<section class="community-section" id="community">
+
+    <div class="container">
+
+        <div class="community-heading reveal">
+
+            <span class="section-kicker">
+                07 / THE COMMUNITY
+            </span>
+
+            <h2>
+                Built for people
+                <em>who love being there.</em>
+            </h2>
+
+            <p>
+
+                VYBE brings artists, audiences and event
+                communities together around experiences
+                that deserve a bigger stage.
+
+            </p>
+
+        </div>
+
+
+        <div class="community-grid">
+
+            <div class="community-stat reveal">
+
+                <span>
+                    EVENTS
+                </span>
+
+                <strong>
+                    250+
+                </strong>
+
+                <p>
+                    Concerts, festivals, performances
+                    and experiences across major cities.
+                </p>
+
+            </div>
+
+
+            <div class="community-quote reveal">
+
+                <span>
+                    THE VYBE STANDARD
+                </span>
+
+                <blockquote>
+
+                    “The best nights aren't planned
+                    around a calendar. They're remembered
+                    because you were there.”
+
+                </blockquote>
+
+                <div class="quote-line"></div>
+
+                <small>
+                    — THE VYBE COMMUNITY
+                </small>
+
+            </div>
+
+
+            <div class="community-stat reveal">
+
+                <span>
+                    CITIES
+                </span>
+
+                <strong>
+                    18
+                </strong>
+
+                <p>
+                    Growing event communities across
+                    India's most active cultural cities.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="community-benefits">
+
+            <div class="benefit reveal">
+
+                <span>
+                    01
+                </span>
+
+                <strong>
+                    Curated Discovery
+                </strong>
+
+                <p>
+                    Events selected around real interests,
+                    artists and local culture.
+                </p>
+
+            </div>
+
+
+            <div class="benefit reveal">
+
+                <span>
+                    02
+                </span>
+
+                <strong>
+                    Clear Information
+                </strong>
+
+                <p>
+                    Everything you need to decide before
+                    booking stays easy to understand.
+                </p>
+
+            </div>
+
+
+            <div class="benefit reveal">
+
+                <span>
+                    03
+                </span>
+
+                <strong>
+                    Digital Access
+                </strong>
+
+                <p>
+                    Keep your ticket experience simple,
+                    accessible and ready when you need it.
+                </p>
+
+            </div>
+
+
+            <div class="benefit reveal">
+
+                <span>
+                    04
+                </span>
+
+                <strong>
+                    More To Discover
+                </strong>
+
+                <p>
+                    New artists, new venues and new
+                    experiences added regularly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SECTION 08 — FINAL CTA
+========================================================= -->
+
+<section class="final-cta-section">
+
+    <div class="final-cta-background">
+
+        <img
+            src="assets/images/cta-event.webp"
+            alt="Crowd at a live event"
+            loading="lazy"
+        >
+
+        <div class="final-cta-overlay"></div>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="final-cta-content reveal">
+
+            <span class="section-kicker">
+                08 / YOUR NEXT EXPERIENCE
+            </span>
+
+
+            <h2>
+                The lights are on.
+                <br>
+                <em>Are you coming?</em>
+            </h2>
+
+
+            <p>
+
+                Find the concert, festival, performance or
+                experience that makes your next night worth
+                talking about.
+
+            </p>
+
+
+            <div class="final-cta-actions">
+
+                <a
+                    href="404.html"
+                    class="final-primary-button"
+                >
+
+                    Explore All Events
+
+                    <span>↗</span>
+
+                </a>
+
+
+                <a
+                    href="404.html"
+                    class="final-secondary-button"
+                >
+
+                    Find Events Near Me
+
+                    <span>⌖</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="cta-note">
+
+                <span>
+                    DISCOVER
+                </span>
+
+                <i></i>
+
+                <span>
+                    CHOOSE
+                </span>
+
+                <i></i>
+
+                <span>
+                    EXPERIENCE
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<!-- =========================================================
+     VYBE — FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="footer-main">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <a href="index.html" class="brand-logo footer-logo">
+                    <img src="assets/logo.webp" alt="VYBE Logo">
+                </a>
+
+                <p>
+                    Discover live events, unforgettable
+                    experiences and moments worth remembering.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="404.html" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="404.html" aria-label="X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="404.html" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="404.html" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="footer-column">
+
+                <h4>
+                    QUICK LINKS
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="eventdetails.html">
+                    Events
+                </a>
+
+                <a href="experience.html">
+                    Experience
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- DISCOVER -->
+            <div class="footer-column">
+
+                <h4>
+                    DISCOVER
+                </h4>
+
+                <a href="eventdetails.html">
+                    Live Events
+                </a>
+
+                <a href="eventdetails.html">
+                    Concerts
+                </a>
+
+                <a href="eventdetails.html">
+                    Festivals
+                </a>
+
+                <a href="eventdetails.html">
+                    Trending Events
+                </a>
+
+                <a href="404.html">
+                    Upcoming Shows
+                </a>
+
+            </div>
+
+
+            <!-- SUPPORT -->
+            <div class="footer-column">
+
+                <h4>
+                    SUPPORT
+                </h4>
+
+                <a href="404.html">
+                    Help Center
+                </a>
+
+                <a href="404.html">
+                    Ticket Guide
+                </a>
+
+                <a href="404.html">
+                    Booking Support
+                </a>
+
+                <a href="404.html">
+                    Refund Policy
+                </a>
+
+                <a href="404.html">
+                    FAQs
+                </a>
+
+            </div>
+
+
+            <!-- NEWSLETTER -->
+            <div class="footer-newsletter">
+
+                <h4>
+                    STAY IN THE VYBE
+                </h4>
+
+                <p>
+                    Get the latest events, exclusive drops,
+                    ticket alerts and unforgettable experiences
+                    straight to your inbox.
+                </p>
+
+                <form id="newsletterForm">
+
+                    <div class="newsletter-input">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            placeholder="Your email address"
+                            aria-label="Email address"
+                            required
+                        >
+
+                        <button
+                            type="submit"
+                            aria-label="Subscribe"
+                        >
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                    <small id="newsletterMessage"></small>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 VYBE. All rights reserved.
+            </span>
+
+            <div>
+
+                <a href="404.html">
+                    Privacy Policy
+                </a>
+
+                <a href="404.html">
+                    Terms
+                </a>
+
+                <a href="404.html">
+                    Cookie Policy
+                </a>
+
+                <a href="404.html">
+                    Security
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     VYBE LOGIN MODAL
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="loginModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="login-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="loginTitle"
+    >
+
+        <!-- CLOSE -->
+        <button
+            type="button"
+            class="modal-close"
+            id="loginModalClose"
+            aria-label="Close login"
+        >
+            ×
+        </button>
+
+
+        <!-- =================================================
+             LOGIN VISUAL
+        ================================================== -->
+
+        <div class="login-visual">
+
+            <img
+                src="assets/images/login.webp"
+                alt="VYBE live event experience"
+            >
+
+            <div class="login-visual-overlay"></div>
+
+
+            <div class="login-visual-content">
+
+                <span>
+                    VYBE LIVE EVENTS
+                </span>
+
+                <h3>
+                    Your next
+                    <br>
+                    unforgettable night
+                    <br>
+                    starts here.
+                </h3>
+
+
+                <div class="login-event-badge">
+
+                    <span class="live-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            LIVE EXPERIENCES
+                        </strong>
+
+                        <small>
+                            Concerts · Festivals · Culture
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="login-visual-footer">
+
+                <span>
+                    DISCOVER
+                </span>
+
+                <i></i>
+
+                <span>
+                    CHOOSE
+                </span>
+
+                <i></i>
+
+                <span>
+                    EXPERIENCE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LOGIN CONTENT
+        ================================================== -->
+
+        <div class="login-content">
+
+            <div class="login-heading">
+
+                <span>
+                    WELCOME TO VYBE
+                </span>
+
+                <h2 id="loginTitle">
+                    Sign in to continue
+                </h2>
+
+                <p>
+                    Access your tickets, events and
+                    personalised VYBE experience.
+                </p>
+
+            </div>
+
+
+            <!-- TABS -->
+
+            <div class="login-tabs">
+
+                <button
+                    type="button"
+                    class="login-tab active"
+                    data-login-tab="user"
+                >
+                    User Login
+                </button>
+
+                <button
+                    type="button"
+                    class="login-tab"
+                    data-login-tab="admin"
+                >
+                    Admin Login
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 USER LOGIN
+            ================================================== -->
+
+            <form
+                class="login-form active"
+                id="userLoginForm"
+                data-login-form="user"
+            >
+
+                <label for="userEmail">
+                    Email Address
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        @
+                    </span>
+
+                    <input
+                        type="email"
+                        id="userEmail"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <label for="userPassword">
+                    Password
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        •
+                    </span>
+
+                    <input
+                        type="password"
+                        id="userPassword"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-password-toggle="userPassword"
+                        aria-label="Show password"
+                    >
+                        <span>◉</span>
+                    </button>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input
+                            type="checkbox"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a href="404.html">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-submit"
+                >
+
+                    <span>
+                        Enter VYBE
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+
+                <p class="login-create">
+
+                    New to VYBE?
+
+                    <a href="404.html">
+                        Create an account
+                    </a>
+
+                </p>
+
+            </form>
+
+
+            <!-- =================================================
+                 ADMIN LOGIN
+            ================================================== -->
+
+            <form
+                class="login-form"
+                id="adminLoginForm"
+                data-login-form="admin"
+            >
+
+                <label for="adminEmail">
+                    Admin Email
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        @
+                    </span>
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="admin@vybe.com"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <label for="adminPassword">
+                    Admin Password
+                </label>
+
+
+                <div class="input-wrap">
+
+                    <span class="input-icon">
+                        #
+                    </span>
+
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        placeholder="Enter admin password"
+                        autocomplete="current-password"
+                        required
+                    >
+
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-password-toggle="adminPassword"
+                        aria-label="Show password"
+                    >
+                        <span>◉</span>
+                    </button>
+
+                </div>
+
+
+                <div class="login-options">
+
+                    <label class="remember-option">
+
+                        <input
+                            type="checkbox"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a href="404.html">
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="login-submit admin-submit"
+                >
+
+                    <span>
+                        Open Admin Panel
+                    </span>
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <div class="login-security">
+
+                <span class="security-icon">
+                    ✓
+                </span>
+
+                <span>
+                    Secure VYBE session · Live event platform
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+>
+    ↑
+</button>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
