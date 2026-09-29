@@ -720,11 +720,18 @@ ul {
 .drawer-navigation a span {
     color: #555b66;
     font-size: 10px;
+    transition: .3s ease;
 }
 
-.drawer-navigation a:hover {
+.drawer-navigation a:hover,
+.drawer-navigation a.active {
     color: #fff;
     padding-left: 8px;
+}
+
+.drawer-navigation a.active span {
+    color: var(--accent, #ff5b35);
+    font-weight: 700;
 }
 
 .drawer-bottom {
@@ -12854,3 +12861,171 @@ section {
 
 
 
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+
+/* =========================================================
+   VYBE NAV — DESKTOP 3D TICKET & RESPONSIVE HEADER
+========================================================= */
+
+@media (min-width: 1025px) {
+    .desktop-nav {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: auto;
+        position: relative;
+        z-index: 50;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .desktop-nav {
+        display: none !important;
+    }
+
+    .header-actions .header-search,
+    .header-actions .header-login,
+    .header-actions .header-ticket {
+        display: none !important;
+    }
+
+    .header-inner {
+        width: calc(100% - 24px);
+        padding: 8px 16px;
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        width: 44px;
+        height: 42px;
+        padding: 0;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        cursor: pointer;
+        z-index: 5001;
+        position: relative;
+        pointer-events: auto;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(3.5px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        transform: translateY(-3.5px) rotate(-45deg);
+    }
+}
+
+.desktop-nav .nav-link {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease;
+    border-radius: 8px;
+}
+
+.desktop-nav .nav-link:hover:not(.active) {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.desktop-nav .nav-link.active {
+    position: relative;
+    z-index: 2;
+    color: #ffffff !important;
+    background: transparent !important;
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    filter: drop-shadow(0 3px 0 #7a1428) drop-shadow(0 6px 14px rgba(255, 59, 92, 0.45));
+}
+
+/* 3D Ticket Background shape via pseudo-element */
+.desktop-nav .nav-link.active::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, #ff5b35 0%, #ff2a6d 50%, #9b27af 100%);
+    clip-path: polygon(
+        0px 4px,
+        4px 0px,
+        calc(100% - 4px) 0px,
+        100% 4px,
+        100% calc(50% - 7px),
+        calc(100% - 2px) calc(50% - 5px),
+        calc(100% - 5px) calc(50% - 3px),
+        calc(100% - 6px) 50%,
+        calc(100% - 5px) calc(50% + 3px),
+        calc(100% - 2px) calc(50% + 5px),
+        100% calc(50% + 7px),
+        100% calc(100% - 4px),
+        calc(100% - 4px) 100%,
+        4px 100%,
+        0px calc(100% - 4px),
+        0px calc(50% + 7px),
+        2px calc(50% + 6px),
+        5px calc(50% + 3px),
+        6px 50%,
+        5px calc(50% - 3px),
+        2px calc(50% - 6px),
+        0px calc(50% - 7px)
+    );
+}
+
+/* Subtle Inner Border / Stitched Line */
+.desktop-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    inset: 2px 8px;
+    z-index: -1;
+    border: 1px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    pointer-events: none;
+}

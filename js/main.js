@@ -226,33 +226,40 @@ document.addEventListener("DOMContentLoaded", () => {
     ===================================================== */
 
     const openDrawer = () => {
-
         if (!mobileDrawer || !mobileOverlay) {
             return;
         }
-
         mobileDrawer.classList.add("active");
         mobileOverlay.classList.add("active");
+        if (menuToggle) menuToggle.classList.add("active");
+        document.body.style.overflow = "hidden";
         body.classList.add("drawer-open");
-
     };
 
-
     const closeDrawer = () => {
-
         if (!mobileDrawer || !mobileOverlay) {
             return;
         }
-
         mobileDrawer.classList.remove("active");
         mobileOverlay.classList.remove("active");
+        if (menuToggle) menuToggle.classList.remove("active");
+        document.body.style.overflow = "";
         body.classList.remove("drawer-open");
-
     };
 
+    const toggleDrawer = () => {
+        if (mobileDrawer && mobileDrawer.classList.contains("active")) {
+            closeDrawer();
+        } else {
+            openDrawer();
+        }
+    };
 
     if (menuToggle) {
-        menuToggle.addEventListener("click", openDrawer);
+        menuToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleDrawer();
+        });
     }
 
     if (drawerClose) {
@@ -263,24 +270,18 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileOverlay.addEventListener("click", closeDrawer);
     }
 
-
     document
-        .querySelectorAll(".drawer-navigation a")
+        .querySelectorAll(".drawer-navigation a, #mobileLoginButton")
         .forEach((link) => {
-
             link.addEventListener("click", () => {
                 closeDrawer();
             });
-
         });
 
-
     document.addEventListener("keydown", (event) => {
-
         if (event.key === "Escape") {
             closeDrawer();
         }
-
     });
 
 
@@ -356,18 +357,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-        navLinks.forEach((link) => {
-
-            link.classList.remove("active");
-
-            const href =
-                link.getAttribute("href");
-
-            if (href === `#${currentSection}`) {
-                link.classList.add("active");
-            }
-
-        });
+        if (sections.length > 0) {
+            navLinks.forEach((link) => {
+                const href = link.getAttribute("href");
+                if (href && href.startsWith("#")) {
+                    link.classList.remove("active");
+                    if (href === `#${currentSection}`) {
+                        link.classList.add("active");
+                    }
+                }
+            });
+        }
 
     };
 
