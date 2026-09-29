@@ -1375,3 +1375,382 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+
+
+
+
+/* =========================================================
+   VYBE — CINEMATIC PRELOADER JS
+   DRUM → JOIN → MICROPHONE → TICKET → EXIT
+   Total Duration: ~3 Seconds
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+    "use strict";
+
+    const preloader = document.getElementById("preloader");
+
+    if (!preloader) return;
+
+    const stage = document.getElementById("preloaderStage");
+
+    const drums = document.querySelectorAll(".preloader-drum");
+
+    const leftDrum = document.querySelector(".drum-left");
+    const rightDrum = document.querySelector(".drum-right");
+
+    const impactLeft = document.querySelector(".impact-left");
+    const impactRight = document.querySelector(".impact-right");
+
+    const beatText = document.querySelector(".preloader-beat-text");
+
+    const joinFlash = document.querySelector(".drum-join-flash");
+
+    const microphone = document.getElementById("preloaderMicrophone");
+
+    const micWaves = document.querySelectorAll(".mic-wave");
+
+    const ticket = document.getElementById("preloaderTicket");
+
+    const ticketTrail = document.querySelector(".ticket-trail");
+
+    const ticketText = document.querySelector(".ticket-fly-text");
+
+    const loaderPercent = document.getElementById("loaderPercent");
+
+    const statusText = document.querySelector(".loader-status-text");
+
+
+    /* =====================================================
+       INITIAL STATE
+    ===================================================== */
+
+    document.body.style.overflow = "hidden";
+
+    preloader.classList.remove("preloader-hide");
+
+    preloader.style.opacity = "1";
+    preloader.style.visibility = "visible";
+    preloader.style.pointerEvents = "auto";
+
+    if (stage) {
+        stage.classList.remove("stage-active");
+    }
+
+    drums.forEach((drum) => {
+        drum.classList.remove(
+            "is-beating",
+            "is-joining",
+            "is-joined"
+        );
+    });
+
+    if (microphone) {
+        microphone.classList.remove(
+            "mic-show",
+            "mic-active"
+        );
+    }
+
+    if (ticket) {
+        ticket.classList.remove(
+            "ticket-show",
+            "ticket-fly"
+        );
+    }
+
+    if (ticketTrail) {
+        ticketTrail.classList.remove("trail-show");
+    }
+
+    if (ticketText) {
+        ticketText.classList.remove("ticket-text-show");
+    }
+
+    if (joinFlash) {
+        joinFlash.classList.remove("flash-show");
+    }
+
+    micWaves.forEach((wave) => {
+        wave.classList.remove("wave-show");
+    });
+
+
+    /* =====================================================
+       FORCE BROWSER TO REGISTER INITIAL STATE
+    ===================================================== */
+
+    void preloader.offsetWidth;
+
+
+    /* =====================================================
+       STAGE START
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (stage) {
+            stage.classList.add("stage-active");
+        }
+
+        /* DRUM BEAT START */
+
+        if (leftDrum) {
+            leftDrum.classList.add("is-beating");
+        }
+
+        if (rightDrum) {
+            rightDrum.classList.add("is-beating");
+        }
+
+        if (impactLeft) {
+            impactLeft.classList.add("impact-show");
+        }
+
+        if (impactRight) {
+            impactRight.classList.add("impact-show");
+        }
+
+        if (beatText) {
+            beatText.classList.add("beat-show");
+        }
+
+    }, 100);
+
+
+    /* =====================================================
+       SECOND DRUM BEAT
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (leftDrum) {
+            leftDrum.classList.remove("is-beating");
+            void leftDrum.offsetWidth;
+            leftDrum.classList.add("is-beating");
+        }
+
+        if (rightDrum) {
+            rightDrum.classList.remove("is-beating");
+            void rightDrum.offsetWidth;
+            rightDrum.classList.add("is-beating");
+        }
+
+    }, 420);
+
+
+    /* =====================================================
+       DRUMS MOVE TO CENTER
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (leftDrum) {
+            leftDrum.classList.remove("is-beating");
+            leftDrum.classList.add("is-joining");
+        }
+
+        if (rightDrum) {
+            rightDrum.classList.remove("is-beating");
+            rightDrum.classList.add("is-joining");
+        }
+
+        if (beatText) {
+            beatText.classList.add("beat-hide");
+        }
+
+    }, 850);
+
+
+    /* =====================================================
+       DRUMS JOIN
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (leftDrum) {
+            leftDrum.classList.remove("is-joining");
+            leftDrum.classList.add("is-joined");
+        }
+
+        if (rightDrum) {
+            rightDrum.classList.remove("is-joining");
+            rightDrum.classList.add("is-joined");
+        }
+
+        if (joinFlash) {
+            joinFlash.classList.add("flash-show");
+        }
+
+        if (impactLeft) {
+            impactLeft.classList.remove("impact-show");
+        }
+
+        if (impactRight) {
+            impactRight.classList.remove("impact-show");
+        }
+
+    }, 1350);
+
+
+    /* =====================================================
+       MICROPHONE APPEARS
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (microphone) {
+            microphone.classList.add("mic-show");
+
+            setTimeout(() => {
+                microphone.classList.add("mic-active");
+            }, 80);
+        }
+
+        /* MIC WAVES */
+
+        micWaves.forEach((wave, index) => {
+
+            setTimeout(() => {
+                wave.classList.add("wave-show");
+            }, index * 100);
+
+        });
+
+        /* DRUMS FADE BACK */
+
+        if (leftDrum) {
+            leftDrum.classList.add("drums-fade");
+        }
+
+        if (rightDrum) {
+            rightDrum.classList.add("drums-fade");
+        }
+
+    }, 1500);
+
+
+    /* =====================================================
+       TICKET START
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (ticket) {
+
+            ticket.classList.add("ticket-show");
+
+            /*
+             * Small delay makes the ticket feel like
+             * it is physically coming OUT of the mic.
+             */
+
+            setTimeout(() => {
+                ticket.classList.add("ticket-fly");
+            }, 50);
+        }
+
+        if (ticketTrail) {
+            ticketTrail.classList.add("trail-show");
+        }
+
+        if (ticketText) {
+            ticketText.classList.add("ticket-text-show");
+        }
+
+        if (statusText) {
+            statusText.textContent = "YOUR EXPERIENCE IS READY";
+        }
+
+    }, 1900);
+
+
+    /* =====================================================
+       LOADER PERCENTAGE
+    ===================================================== */
+
+    const startTime = performance.now();
+
+    const TOTAL_TIME = 3000;
+
+    function updateProgress(currentTime) {
+
+        const elapsed = currentTime - startTime;
+
+        let percentage = Math.round(
+            (elapsed / TOTAL_TIME) * 100
+        );
+
+        percentage = Math.min(percentage, 100);
+
+        if (loaderPercent) {
+            loaderPercent.textContent = percentage;
+        }
+
+        if (elapsed < TOTAL_TIME) {
+            requestAnimationFrame(updateProgress);
+        }
+
+    }
+
+    requestAnimationFrame(updateProgress);
+
+
+    /* =====================================================
+       FINISH
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (loaderPercent) {
+            loaderPercent.textContent = "100";
+        }
+
+        if (statusText) {
+            statusText.textContent = "WELCOME TO VYBE";
+        }
+
+        /*
+         * Keep ticket visible for a moment.
+         * Then fade the COMPLETE preloader.
+         */
+
+        setTimeout(() => {
+
+            preloader.classList.add("preloader-hide");
+
+            document.body.style.overflow = "";
+
+        }, 220);
+
+    }, TOTAL_TIME);
+
+
+    /* =====================================================
+       REMOVE FROM DOM
+    ===================================================== */
+
+    setTimeout(() => {
+
+        if (preloader) {
+            preloader.remove();
+        }
+
+    }, 3650);
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

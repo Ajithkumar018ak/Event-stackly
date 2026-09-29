@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 — VYBE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            background: #030405;
+            color: #ffffff;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================================================
+           MAIN PAGE
+        ========================================================= */
+
+        .error-page {
+            position: relative;
+
+            width: 100%;
+            height: 100svh;
+            min-height: 650px;
+
+            overflow: hidden;
+
+            isolation: isolate;
+
+            perspective: 1800px;
+
+            background:
+                radial-gradient(
+                    circle at 50% 32%,
+                    rgba(255,255,255,.105),
+                    transparent 22%
+                ),
+                radial-gradient(
+                    circle at 50% 82%,
+                    rgba(75,100,255,.13),
+                    transparent 38%
+                ),
+                linear-gradient(
+                    145deg,
+                    #020304 0%,
+                    #090b10 48%,
+                    #030405 100%
+                );
+        }
+
+
+        /* =========================================================
+           CENTER LIGHT
+        ========================================================= */
+
+        .center-light {
+            position: absolute;
+
+            left: 50%;
+            top: 37%;
+
+            width: 500px;
+            height: 500px;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(255,255,255,.075),
+                    rgba(255,255,255,.02) 38%,
+                    transparent 72%
+                );
+
+            filter: blur(18px);
+
+            z-index: -5;
+
+            animation:
+                lightPulse 5s ease-in-out infinite;
+        }
+
+        @keyframes lightPulse {
+
+            0%,
+            100% {
+                transform:
+                    translate(-50%, -50%)
+                    scale(.9);
+
+                opacity: .55;
+            }
+
+            50% {
+                transform:
+                    translate(-50%, -50%)
+                    scale(1.12);
+
+                opacity: 1;
+            }
+
+        }
+
+
+        /* =========================================================
+           3D FLOOR
+        ========================================================= */
+
+        .floor {
+            position: absolute;
+
+            left: -20%;
+            bottom: -55%;
+
+            width: 140%;
+            height: 82%;
+
+            transform:
+                perspective(850px)
+                rotateX(68deg);
+
+            transform-origin: center top;
+
+            background:
+                linear-gradient(
+                    rgba(255,255,255,.04) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.04) 1px,
+                    transparent 1px
+                );
+
+            background-size: 85px 85px;
+
+            opacity: .32;
+
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    #000 35%,
+                    #000
+                );
+
+            z-index: -3;
+        }
+
+
+        /* =========================================================
+           ORBITS
+        ========================================================= */
+
+        .orbit {
+            position: absolute;
+
+            left: 50%;
+            top: 40%;
+
+            border:
+                1px solid rgba(255,255,255,.045);
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            transform:
+                translate(-50%, -50%)
+                rotateX(65deg);
+
+            z-index: -2;
+        }
+
+        .orbit-one {
+            width: 470px;
+            height: 470px;
+
+            animation:
+                orbitOne 18s linear infinite;
+        }
+
+        .orbit-two {
+            width: 650px;
+            height: 650px;
+
+            opacity: .55;
+
+            animation:
+                orbitTwo 25s linear infinite;
+        }
+
+        .orbit-three {
+            width: 850px;
+            height: 850px;
+
+            opacity: .22;
+
+            animation:
+                orbitOne 32s linear infinite;
+        }
+
+        @keyframes orbitOne {
+
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(65deg)
+                    rotateZ(0deg);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(65deg)
+                    rotateZ(360deg);
+            }
+
+        }
+
+        @keyframes orbitTwo {
+
+            from {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(65deg)
+                    rotateZ(360deg);
+            }
+
+            to {
+                transform:
+                    translate(-50%, -50%)
+                    rotateX(65deg)
+                    rotateZ(0deg);
+            }
+
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        .topbar {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding:
+                28px
+                clamp(22px, 5vw, 75px);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            z-index: 50;
+        }
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 11px;
+
+            font-size: 20px;
+
+            font-weight: 800;
+
+            letter-spacing: -.06em;
+        }
+
+        .brand-mark {
+            width: 34px;
+            height: 34px;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                1px solid rgba(255,255,255,.25);
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.16),
+                    rgba(255,255,255,.03)
+                );
+
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,.15),
+                0 15px 40px rgba(0,0,0,.3);
+
+            font-size: 12px;
+        }
+
+        .status {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            color:
+                rgba(255,255,255,.45);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: .2em;
+
+            text-transform: uppercase;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+
+            border-radius: 50%;
+
+            background: #fff;
+
+            box-shadow:
+                0 0 15px rgba(255,255,255,.9);
+
+            animation:
+                blink 1.8s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: .3;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+        }
+
+
+        /* =========================================================
+           GIANT 404
+        ========================================================= */
+
+        .giant-number {
+            position: absolute;
+
+            left: 50%;
+            top: 47%;
+
+            transform:
+                translate(-50%, -50%)
+                translateZ(-400px);
+
+            font-size:
+                clamp(210px, 38vw, 620px);
+
+            line-height: .75;
+
+            font-weight: 800;
+
+            letter-spacing: -.12em;
+
+            color: transparent;
+
+            -webkit-text-stroke:
+                1px rgba(255,255,255,.045);
+
+            white-space: nowrap;
+
+            user-select: none;
+
+            pointer-events: none;
+
+            z-index: 0;
+
+            animation:
+                numberFloat 8s ease-in-out infinite;
+        }
+
+        @keyframes numberFloat {
+
+            0%,
+            100% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(-400px)
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(-400px)
+                    scale(1.03);
+            }
+
+        }
+
+
+        /* =========================================================
+           CENTER SCENE
+        ========================================================= */
+
+        .scene {
+            position: absolute;
+
+            left: 50%;
+            top: 39%;
+
+            width:
+                min(540px, 76vw);
+
+            height:
+                min(540px, 76vw);
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: 5;
+
+            pointer-events: none;
+
+            transform-style: preserve-3d;
+        }
+
+
+        /* =========================================================
+           MICROPHONE
+        ========================================================= */
+
+        .mic {
+            position: absolute;
+
+            left: 50%;
+            top: 47%;
+
+            width: 130px;
+            height: 235px;
+
+            transform:
+                translate(-50%, -50%)
+                translateZ(100px);
+
+            opacity: 1;
+
+            transform-style: preserve-3d;
+
+            animation:
+                micEnter 1.4s cubic-bezier(.16,1,.3,1) forwards,
+                micFloat 4s 1.4s ease-in-out infinite;
+
+            z-index: 8;
+        }
+
+        .mic.hidden {
+            animation:
+                micDisappear .8s cubic-bezier(.7,0,.84,0) forwards;
+        }
+
+        @keyframes micEnter {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(-500px)
+                    scale(.3)
+                    rotateY(45deg);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    scale(1)
+                    rotateY(0);
+            }
+
+        }
+
+        @keyframes micFloat {
+
+            0%,
+            100% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    translateY(0)
+                    rotateY(-5deg);
+            }
+
+            50% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    translateY(-14px)
+                    rotateY(5deg);
+            }
+
+        }
+
+        @keyframes micDisappear {
+
+            0% {
+                opacity: 1;
+
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    scale(1)
+                    rotateY(0);
+            }
+
+            100% {
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(500px)
+                    scale(.1)
+                    rotateY(80deg);
+            }
+
+        }
+
+        .mic-head {
+            position: absolute;
+
+            left: 50%;
+            top: 36%;
+
+            width: 126px;
+            height: 170px;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius:
+                65px
+                65px
+                48px
+                48px;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #0e1014 0%,
+                    #747a83 17%,
+                    #202329 36%,
+                    #a1a6ad 51%,
+                    #1b1e23 71%,
+                    #080a0d 100%
+                );
+
+            border:
+                1px solid rgba(255,255,255,.3);
+
+            box-shadow:
+                inset 13px 0 22px rgba(255,255,255,.13),
+                inset -18px 0 25px rgba(0,0,0,.65),
+                0 40px 70px rgba(0,0,0,.65),
+                0 0 60px rgba(255,255,255,.05);
+        }
+
+        .mic-head::before {
+            content: "";
+
+            position: absolute;
+
+            left: 12px;
+            right: 12px;
+
+            top: 11px;
+            bottom: 11px;
+
+            border-radius: 55px;
+
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(255,255,255,.14) 0px,
+                    rgba(255,255,255,.14) 2px,
+                    transparent 2px,
+                    transparent 5px
+                );
+
+            opacity: .72;
+        }
+
+        .mic-neck {
+            position: absolute;
+
+            left: 50%;
+            top: 67%;
+
+            width: 7px;
+            height: 60px;
+
+            transform:
+                translateX(-50%);
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #111318,
+                    #a1a6ad,
+                    #111318
+                );
+        }
+
+        .mic-base {
+            position: absolute;
+
+            left: 50%;
+            top: 79%;
+
+            width: 180px;
+            height: 22px;
+
+            transform:
+                translateX(-50%)
+                rotateX(65deg);
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #0d0f12,
+                    #8d939b,
+                    #121419
+                );
+
+            box-shadow:
+                0 35px 50px rgba(0,0,0,.65);
+        }
+
+
+        /* =========================================================
+           PNG STAGE
+        ========================================================= */
+
+        .png-stage {
+            position: absolute;
+
+            left: 50%;
+            top: 37%;
+
+            width:
+                min(470px, 70vw);
+
+            /*
+                SAME HEIGHT FOR ALL 3 IMAGES
+            */
+            height:
+                390px;
+
+            transform:
+                translate(-50%, -50%)
+                scale(.65);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            z-index: 9;
+
+            transform-style: preserve-3d;
+
+            transition:
+                opacity .8s ease,
+                visibility .8s ease,
+                transform 1s cubic-bezier(.16,1,.3,1);
+        }
+
+        .png-stage.active {
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translate(-50%, -50%)
+                scale(1);
+        }
+
+
+        /* =========================================================
+           PNG WRAPPER
+           ALL IMAGES SAME HEIGHT
+        ========================================================= */
+
+        .png-item {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            /*
+                IMPORTANT:
+                All PNGs get EXACT same visual box
+            */
+
+            width: 320px;
+            height: 330px;
+
+            object-fit: contain;
+
+            object-position: center center;
+
+            transform:
+                translate(-50%, -50%)
+                translateZ(100px);
+
+            opacity: 0;
+
+            filter:
+                drop-shadow(
+                    0 35px 45px rgba(0,0,0,.7)
+                )
+                drop-shadow(
+                    0 0 25px rgba(255,255,255,.07)
+                );
+
+            transition:
+                opacity .55s ease,
+                transform .8s cubic-bezier(.16,1,.3,1);
+
+            transform-style: preserve-3d;
+
+            /*
+                prevents different source dimensions
+                from changing visual height
+            */
+            max-width: 320px;
+            max-height: 330px;
+        }
+
+        .png-item.active {
+            opacity: 1;
+
+            animation:
+                object3D 4.8s ease-in-out infinite;
+        }
+
+        @keyframes object3D {
+
+            0% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    rotateY(-18deg)
+                    rotateX(3deg)
+                    translateY(0);
+            }
+
+            25% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(120px)
+                    rotateY(0deg)
+                    rotateX(-2deg)
+                    translateY(-8px);
+            }
+
+            50% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    rotateY(18deg)
+                    rotateX(3deg)
+                    translateY(0);
+            }
+
+            75% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(120px)
+                    rotateY(0deg)
+                    rotateX(-2deg)
+                    translateY(-8px);
+            }
+
+            100% {
+                transform:
+                    translate(-50%, -50%)
+                    translateZ(100px)
+                    rotateY(-18deg)
+                    rotateX(3deg)
+                    translateY(0);
+            }
+
+        }
+
+
+        /* =========================================================
+           BLACK OVERLAY UNDER PNG
+        ========================================================= */
+
+        .png-shadow {
+            position: absolute;
+
+            left: 50%;
+            top: 76%;
+
+            width: 320px;
+            height: 95px;
+
+            transform:
+                translateX(-50%)
+                rotateX(68deg);
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    ellipse,
+                    rgba(0,0,0,.95) 0%,
+                    rgba(0,0,0,.72) 38%,
+                    rgba(0,0,0,.3) 63%,
+                    transparent 78%
+                );
+
+            filter:
+                blur(8px);
+
+            opacity: .9;
+
+            z-index: 1;
+
+            animation:
+                shadowPulse 4.8s ease-in-out infinite;
+        }
+
+        /*
+            Extra black floor overlay
+            gives the PNG a grounded cinematic look
+        */
+
+        .png-shadow::after {
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+            top: 45%;
+
+            width: 70%;
+            height: 45%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-radius: 50%;
+
+            background:
+                rgba(0,0,0,.38);
+
+            filter:
+                blur(22px);
+        }
+
+        @keyframes shadowPulse {
+
+            0%,
+            100% {
+                transform:
+                    translateX(-50%)
+                    rotateX(68deg)
+                    scale(1);
+
+                opacity: .85;
+            }
+
+            50% {
+                transform:
+                    translateX(-50%)
+                    rotateX(68deg)
+                    scale(.78);
+
+                opacity: .55;
+            }
+
+        }
+
+
+        /* =========================================================
+           404 TEXT
+        ========================================================= */
+
+        .content {
+            position: absolute;
+
+            left: 50%;
+            top: 57%;
+
+            width: 100%;
+
+            transform:
+                translate(-50%, -50%);
+
+            text-align: center;
+
+            z-index: 25;
+
+            pointer-events: none;
+
+            padding: 20px;
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+
+            color:
+                rgba(255,255,255,.5);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: .3em;
+
+            text-transform: uppercase;
+        }
+
+        .main-title {
+            font-size:
+                clamp(48px, 8vw, 110px);
+
+            line-height: .84;
+
+            font-weight: 800;
+
+            letter-spacing: -.08em;
+
+            text-transform: uppercase;
+
+            text-shadow:
+                0 15px 60px rgba(0,0,0,.8);
+        }
+
+        .main-title span {
+            display: block;
+        }
+
+        .main-title .not-found {
+            color:
+                rgba(255,255,255,.32);
+        }
+
+        .description {
+            max-width: 430px;
+
+            margin:
+                22px auto 0;
+
+            color:
+                rgba(255,255,255,.5);
+
+            font-size: 12px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================================================
+           ACTION PANEL
+        ========================================================= */
+
+        .actions {
+            position: absolute;
+
+            left: 50%;
+            bottom: 30px;
+
+            transform:
+                translateX(-50%);
+
+            width:
+                min(700px, calc(100% - 30px));
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 10px;
+
+            padding: 9px;
+
+            border:
+                1px solid rgba(255,255,255,.16);
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,.13),
+                    rgba(255,255,255,.035)
+                );
+
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,.14),
+                0 25px 80px rgba(0,0,0,.55);
+
+            backdrop-filter:
+                blur(26px);
+
+            -webkit-backdrop-filter:
+                blur(26px);
+
+            z-index: 60;
+        }
+
+        .action {
+            position: relative;
+
+            min-height: 68px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 13px;
+
+            border:
+                1px solid rgba(255,255,255,.08);
+
+            border-radius: 17px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            color:
+                rgba(255,255,255,.72);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: .14em;
+
+            text-transform: uppercase;
+
+            overflow: hidden;
+
+            transition:
+                transform .35s ease,
+                color .35s ease,
+                background .35s ease,
+                border-color .35s ease;
+        }
+
+        .action::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    115deg,
+                    transparent 20%,
+                    rgba(255,255,255,.14),
+                    transparent 80%
+                );
+
+            transform:
+                translateX(-120%);
+
+            transition:
+                transform .75s ease;
+        }
+
+        .action:hover {
+            color: #fff;
+
+            background:
+                rgba(255,255,255,.12);
+
+            border-color:
+                rgba(255,255,255,.2);
+
+            transform:
+                translateY(-3px);
+        }
+
+        .action:hover::before {
+            transform:
+                translateX(120%);
+        }
+
+        .action-icon {
+            position: relative;
+
+            width: 30px;
+            height: 30px;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                1px solid rgba(255,255,255,.2);
+
+            border-radius: 50%;
+
+            font-size: 13px;
+
+            transition:
+                transform .35s ease;
+        }
+
+        .action:hover .action-icon {
+            transform:
+                rotate(10deg)
+                scale(1.08);
+        }
+
+
+        /* =========================================================
+           EXIT
+        ========================================================= */
+
+        .error-page.leaving .content {
+            animation:
+                textExit .55s ease forwards;
+        }
+
+        .error-page.leaving .actions {
+            animation:
+                actionsExit .5s ease forwards;
+        }
+
+        .error-page.leaving .png-stage {
+            animation:
+                objectExit .7s ease forwards;
+        }
+
+        @keyframes textExit {
+
+            to {
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -50%)
+                    translateY(-35px)
+                    scale(.95);
+
+                filter: blur(8px);
+            }
+
+        }
+
+        @keyframes actionsExit {
+
+            to {
+                opacity: 0;
+
+                transform:
+                    translateX(-50%)
+                    translateY(50px);
+            }
+
+        }
+
+        @keyframes objectExit {
+
+            to {
+                opacity: 0;
+
+                transform:
+                    translate(-50%, -50%)
+                    scale(1.35)
+                    rotateY(40deg);
+            }
+
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            .error-page {
+                min-height: 620px;
+            }
+
+            .topbar {
+                padding: 20px;
+            }
+
+            .brand {
+                font-size: 18px;
+            }
+
+            .brand-mark {
+                width: 30px;
+                height: 30px;
+            }
+
+            .status {
+                font-size: 7px;
+
+                letter-spacing: .12em;
+            }
+
+            .scene {
+                width: 340px;
+                height: 340px;
+
+                top: 35%;
+            }
+
+            .mic {
+                transform:
+                    translate(-50%, -50%)
+                    scale(.78)
+                    translateZ(80px);
+            }
+
+            .png-stage {
+                width: 340px;
+                height: 360px;
+
+                top: 34%;
+            }
+
+            .png-item {
+                width: 260px;
+                height: 300px;
+
+                max-width: 260px;
+                max-height: 300px;
+            }
+
+            .png-shadow {
+                width: 270px;
+                height: 80px;
+
+                top: 76%;
+            }
+
+            .giant-number {
+                font-size: 220px;
+
+                top: 42%;
+            }
+
+            .content {
+                top: 57%;
+            }
+
+            .eyebrow {
+                font-size: 8px;
+
+                letter-spacing: .2em;
+            }
+
+            .main-title {
+                font-size:
+                    clamp(43px, 13vw, 68px);
+            }
+
+            .description {
+                max-width: 310px;
+
+                font-size: 10px;
+
+                line-height: 1.7;
+
+                margin-top: 16px;
+            }
+
+            .actions {
+                bottom: 16px;
+
+                width:
+                    calc(100% - 22px);
+
+                padding: 6px;
+
+                gap: 6px;
+
+                border-radius: 19px;
+            }
+
+            .action {
+                min-height: 58px;
+
+                font-size: 8px;
+
+                letter-spacing: .07em;
+
+                gap: 6px;
+            }
+
+            .action-icon {
+                width: 23px;
+                height: 23px;
+
+                font-size: 9px;
+            }
+
+            .floor {
+                background-size:
+                    55px 55px;
+            }
+
+        }
+
+
+        @media (max-width: 380px) {
+
+            .status {
+                display: none;
+            }
+
+            .scene {
+                width: 300px;
+                height: 300px;
+            }
+
+            .png-stage {
+                width: 300px;
+                height: 330px;
+            }
+
+            .png-item {
+                width: 235px;
+                height: 270px;
+
+                max-width: 235px;
+                max-height: 270px;
+            }
+
+            .png-shadow {
+                width: 245px;
+            }
+
+            .main-title {
+                font-size: 40px;
+            }
+
+            .description {
+                font-size: 9px;
+            }
+
+            .action {
+                font-size: 7px;
+
+                padding: 0 5px;
+            }
+
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+
+                animation-iteration-count: 1 !important;
+
+                transition-duration: .01ms !important;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main
+        class="error-page"
+        id="errorPage"
+    >
+
+
+        <!-- =====================================================
+             BACKGROUND
+        ====================================================== -->
+
+        <div class="center-light"></div>
+
+        <div class="orbit orbit-one"></div>
+
+        <div class="orbit orbit-two"></div>
+
+        <div class="orbit orbit-three"></div>
+
+        <div class="floor"></div>
+
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
+
+
+        <!-- =====================================================
+             BACKGROUND 404
+        ====================================================== -->
+
+        <div class="giant-number">
+            404
+        </div>
+
+
+        <!-- =====================================================
+             3D CENTER
+        ====================================================== -->
+
+        <div class="scene">
+
+
+            <!-- ================================================
+                 MICROPHONE
+            ================================================= -->
+
+            <div
+                class="mic"
+                id="mic"
+            >
+
+                <div class="mic-head"></div>
+
+                <div class="mic-neck"></div>
+
+                <div class="mic-base"></div>
+
+            </div>
+
+
+            <!-- ================================================
+                 THREE PNGs
+            ================================================= -->
+
+            <div
+                class="png-stage"
+                id="pngStage"
+            >
+
+
+                <!-- BLACK OVERLAY / SHADOW -->
+
+                <div class="png-shadow"></div>
+
+
+                <!-- PNG 01 -->
+
+                <img
+                    src="assets/404-1.png"
+                    alt="VYBE object one"
+                    class="png-item active"
+                >
+
+
+                <!-- PNG 02 -->
+
+                <img
+                    src="assets/404-2.png"
+                    alt="VYBE object two"
+                    class="png-item"
+                >
+
+
+                <!-- PNG 03 -->
+
+                <img
+                    src="assets/404-3.webp"
+                    alt="VYBE object three"
+                    class="png-item"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             404 CONTENT
+        ====================================================== -->
+
+        <section class="content">
+
+            <div class="eyebrow">
+                ERROR 404 · VYBE
+            </div>
+
+
+            <h1 class="main-title">
+
+                <span>
+                    404
+                </span>
+
+                <span class="not-found">
+                    PAGE NOT FOUND
+                </span>
+
+            </h1>
+
+
+            <p class="description">
+
+                This page has left the lineup.
+                Get back to VYBE and discover your next event.
+
+            </p>
+
+        </section>
+
+
+        <!-- =====================================================
+             BUTTONS
+        ====================================================== -->
+
+        <nav class="actions">
+
+
+            <a
+                href="index.html"
+                class="action"
+                data-link="index.html"
+            >
+
+                <span class="action-icon">
+                    ↗
+                </span>
+
+                <span>
+                    Back To Home
+                </span>
+
+            </a>
+
+
+            <a
+                href="eventdetails.html"
+                class="action"
+                data-link="eventdetails.html"
+            >
+
+                <span class="action-icon">
+                    →
+                </span>
+
+                <span>
+                    Back To Events
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+    </main>
+
+
+    <script>
+
+        /* =========================================================
+           VYBE 404 JAVASCRIPT
+        ========================================================= */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                "use strict";
+
+
+                var page =
+                    document.getElementById(
+                        "errorPage"
+                    );
+
+
+                var mic =
+                    document.getElementById(
+                        "mic"
+                    );
+
+
+                var pngStage =
+                    document.getElementById(
+                        "pngStage"
+                    );
+
+
+                var pngItems =
+                    document.querySelectorAll(
+                        ".png-item"
+                    );
+
+
+                var links =
+                    document.querySelectorAll(
+                        "[data-link]"
+                    );
+
+
+                var currentImage = 0;
+
+                var imageInterval = null;
+
+
+                /* =================================================
+                   MICROPHONE → PNG
+                ================================================= */
+
+                window.setTimeout(
+                    function () {
+
+                        if (mic) {
+
+                            mic.classList.add(
+                                "hidden"
+                            );
+
+                        }
+
+
+                        window.setTimeout(
+                            function () {
+
+                                if (!pngStage) {
+                                    return;
+                                }
+
+
+                                pngStage.classList.add(
+                                    "active"
+                                );
+
+
+                                startImageRotation();
+
+                            },
+                            500
+                        );
+
+                    },
+                    2500
+                );
+
+
+                /* =================================================
+                   PNG ROTATION
+                ================================================= */
+
+                function startImageRotation() {
+
+                    if (!pngItems.length) {
+                        return;
+                    }
+
+
+                    imageInterval =
+                        window.setInterval(
+                            function () {
+
+                                var previous =
+                                    pngItems[
+                                        currentImage
+                                    ];
+
+
+                                currentImage++;
+
+
+                                if (
+                                    currentImage >=
+                                    pngItems.length
+                                ) {
+
+                                    currentImage = 0;
+
+                                }
+
+
+                                var next =
+                                    pngItems[
+                                        currentImage
+                                    ];
+
+
+                                previous.classList.remove(
+                                    "active"
+                                );
+
+
+                                next.classList.add(
+                                    "active"
+                                );
+
+                            },
+                            2600
+                        );
+
+                }
+
+
+                /* =================================================
+                   BUTTON NAVIGATION
+                ================================================= */
+
+                for (
+                    var i = 0;
+                    i < links.length;
+                    i++
+                ) {
+
+                    links[i].addEventListener(
+                        "click",
+                        function (event) {
+
+                            event.preventDefault();
+
+
+                            var destination =
+                                this.getAttribute(
+                                    "data-link"
+                                );
+
+
+                            if (
+                                imageInterval
+                            ) {
+
+                                window.clearInterval(
+                                    imageInterval
+                                );
+
+                            }
+
+
+                            page.classList.add(
+                                "leaving"
+                            );
+
+
+                            window.setTimeout(
+                                function () {
+
+                                    window.location.href =
+                                        destination;
+
+                                },
+                                520
+                            );
+
+                        }
+                    );
+
+                }
+
+
+                /* =================================================
+                   MOUSE 3D PARALLAX
+                ================================================= */
+
+                if (
+                    window.matchMedia &&
+                    window.matchMedia(
+                        "(pointer: fine)"
+                    ).matches
+                ) {
+
+                    document.addEventListener(
+                        "mousemove",
+                        function (event) {
+
+                            var x =
+                                (
+                                    event.clientX /
+                                    window.innerWidth
+                                ) - .5;
+
+
+                            var y =
+                                (
+                                    event.clientY /
+                                    window.innerHeight
+                                ) - .5;
+
+
+                            if (pngStage) {
+
+                                pngStage.style.marginLeft =
+                                    (x * 18) + "px";
+
+                                pngStage.style.marginTop =
+                                    (y * 14) + "px";
+
+                            }
+
+
+                            if (mic) {
+
+                                mic.style.marginLeft =
+                                    (x * 10) + "px";
+
+                                mic.style.marginTop =
+                                    (y * 8) + "px";
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+                /* =================================================
+                   ESC → HOME
+                ================================================= */
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape"
+                        ) {
+
+                            window.location.href =
+                                "index.html";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>

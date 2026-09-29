@@ -1,0 +1,942 @@
+/* =========================================================
+   VYBE CONTACT PAGE
+   PREMIUM SCROLL REVEAL + IMAGE REVEAL
+========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL REVEAL SYSTEM
+========================================================= */
+
+.contact-page .reveal-item {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.9s cubic-bezier(.22, 1, .36, 1),
+        transform 0.9s cubic-bezier(.22, 1, .36, 1);
+}
+
+.contact-page .reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   02. HERO
+========================================================= */
+
+.contact-page .contact-hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-page .contact-hero-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.contact-page .contact-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: scale(1.12);
+
+    animation:
+        contactHeroZoom 2.2s cubic-bezier(.22, 1, .36, 1)
+        forwards;
+}
+
+@keyframes contactHeroZoom {
+
+    from {
+        transform: scale(1.12);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+
+/* HERO TOP */
+
+.contact-page .contact-hero-top {
+    animation:
+        heroTopReveal
+        0.9s
+        cubic-bezier(.22, 1, .36, 1)
+        0.2s
+        both;
+}
+
+@keyframes heroTopReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* HERO MAIN */
+
+.contact-page .contact-hero-main {
+    animation:
+        heroMainReveal
+        1s
+        cubic-bezier(.22, 1, .36, 1)
+        0.35s
+        both;
+}
+
+@keyframes heroMainReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(55px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* HERO BOTTOM */
+
+.contact-page .contact-hero-bottom {
+    animation:
+        heroBottomReveal
+        0.9s
+        cubic-bezier(.22, 1, .36, 1)
+        0.6s
+        both;
+}
+
+@keyframes heroBottomReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   03. TEXT REVEALS
+========================================================= */
+
+.contact-page .contact-intro-content,
+.contact-page .contact-section-heading,
+.contact-page .contact-form-heading,
+.contact-page .contact-direct-top,
+.contact-page .contact-reasons-heading,
+.contact-page .contact-faq-heading,
+.contact-page .contact-service-heading,
+.contact-page .contact-service-content,
+.contact-page .contact-final-content {
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity 0.9s cubic-bezier(.22, 1, .36, 1),
+        transform 0.9s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+.contact-page .is-visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   04. OPTION CARDS
+========================================================= */
+
+.contact-page .contact-option-card {
+
+    opacity: 0;
+
+    transform:
+        translateY(65px)
+        scale(.97);
+
+    transition:
+        opacity .8s cubic-bezier(.22, 1, .36, 1),
+        transform .8s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-option-card.is-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   OPTION CARD HOVER
+========================================================= */
+
+.contact-page .contact-option-card {
+
+    transition:
+        opacity .8s cubic-bezier(.22, 1, .36, 1),
+        transform .8s cubic-bezier(.22, 1, .36, 1),
+        border-color .35s ease,
+        background .35s ease;
+
+}
+
+
+.contact-page .contact-option-card:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.01);
+
+}
+
+
+/* =========================================================
+   05. FORM IMAGE
+========================================================= */
+
+.contact-page .contact-form-visual {
+
+    position: relative;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateX(-70px);
+
+    transition:
+        opacity 1s cubic-bezier(.22, 1, .36, 1),
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-form-visual.is-visible {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+.contact-page .contact-form-visual img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.15);
+
+    transition:
+        transform 1.7s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-form-visual.is-visible img {
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================================
+   FORM QUOTE
+========================================================= */
+
+.contact-page .contact-form-quote {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity .8s ease .4s,
+        transform .8s cubic-bezier(.22, 1, .36, 1) .4s;
+
+}
+
+
+.contact-page .contact-form-visual.is-visible
+.contact-form-quote {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   06. DIRECT CONTACT
+========================================================= */
+
+.contact-page .contact-direct-card {
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    transition:
+        opacity .8s cubic-bezier(.22, 1, .36, 1),
+        transform .8s cubic-bezier(.22, 1, .36, 1),
+        background .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.contact-page .contact-direct-card.is-visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.contact-page .contact-direct-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+/* =========================================================
+   07. REASONS
+========================================================= */
+
+.contact-page .contact-reason {
+
+    opacity: 0;
+
+    transform: translateX(55px);
+
+    transition:
+        opacity .8s cubic-bezier(.22, 1, .36, 1),
+        transform .8s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-reason.is-visible {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/* =========================================================
+   08. FAQ
+========================================================= */
+
+.contact-page .contact-faq-item {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-faq-item.is-visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.contact-page .contact-faq-item[open]
+.contact-faq-answer {
+
+    animation:
+        faqOpen
+        .45s
+        cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+@keyframes faqOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-12px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   09. IMAGE BREAK
+========================================================= */
+
+/*
+   IMPORTANT:
+   Default visible.
+   JS இல்லையென்றாலும் image show ஆகும்.
+*/
+
+
+
+/* JS reveal */
+
+.contact-page .contact-image-break.is-visible {
+
+    clip-path: inset(0 0 0 0);
+
+}
+
+
+/* IMAGE */
+
+.contact-page .contact-image-break > img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 650px;
+
+    object-fit: cover;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1.15);
+
+    transition:
+        transform 1.8s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+/* IMAGE ZOOM OUT */
+
+.contact-page .contact-image-break.is-visible > img {
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================================
+   IMAGE BREAK OVERLAY
+========================================================= */
+
+.contact-page .contact-image-break-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* =========================================================
+   IMAGE BREAK CONTENT
+========================================================= */
+
+.contact-page .contact-image-break-content {
+
+    position: absolute;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    transform: translateY(55px);
+
+    transition:
+        opacity .9s ease .45s,
+        transform .9s cubic-bezier(.22, 1, .36, 1) .45s;
+
+}
+
+
+.contact-page .contact-image-break.is-visible
+.contact-image-break-content {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* LABEL */
+
+.contact-page .contact-image-break-content > span {
+
+    display: block;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity .6s ease .65s,
+        transform .6s ease .65s;
+
+}
+
+
+.contact-page .contact-image-break.is-visible
+.contact-image-break-content > span {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* HEADING */
+
+.contact-page .contact-image-break-content h2 {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .8s ease .75s,
+        transform .8s cubic-bezier(.22, 1, .36, 1) .75s;
+
+}
+
+
+.contact-page .contact-image-break.is-visible
+.contact-image-break-content h2 {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* LINE */
+
+.contact-page .contact-image-break-line {
+
+    transform:
+        scaleX(0);
+
+    transform-origin: left center;
+
+    transition:
+        transform .8s cubic-bezier(.77, 0, .18, 1) 1s;
+
+}
+
+
+.contact-page .contact-image-break.is-visible
+.contact-image-break-line {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+/* =========================================================
+   10. SERVICE STATS
+========================================================= */
+
+.contact-page .contact-service-stats > div {
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity .6s ease,
+        transform .6s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-service-content.is-visible
+.contact-service-stats > div {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+.contact-page .contact-service-content.is-visible
+.contact-service-stats > div:nth-child(1) {
+    transition-delay: .1s;
+}
+
+.contact-page .contact-service-content.is-visible
+.contact-service-stats > div:nth-child(2) {
+    transition-delay: .2s;
+}
+
+.contact-page .contact-service-content.is-visible
+.contact-service-stats > div:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.contact-page .contact-service-content.is-visible
+.contact-service-stats > div:nth-child(4) {
+    transition-delay: .4s;
+}
+
+
+/* =========================================================
+   11. FINAL IMAGE
+========================================================= */
+
+.contact-page .contact-final-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.contact-page .contact-final-bg img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.12);
+
+    transition:
+        transform 1.8s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-final-bg.is-visible img {
+
+    transform: scale(1);
+
+}
+
+
+/* =========================================================
+   12. FINAL CONTENT
+========================================================= */
+
+.contact-page .contact-final-content {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+        opacity 1s cubic-bezier(.22, 1, .36, 1),
+        transform 1s cubic-bezier(.22, 1, .36, 1);
+
+}
+
+
+.contact-page .contact-final-content.is-visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   13. SCROLL ARROW
+========================================================= */
+
+.contact-page .contact-hero-scroll i {
+
+    animation:
+        contactScrollArrow
+        1.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes contactScrollArrow {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(8px);
+
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .contact-page .contact-image-break > img {
+
+        min-height: 500px;
+
+    }
+
+    .contact-page .contact-option-card:hover {
+
+        transform: none;
+
+    }
+
+    .contact-page .contact-direct-card:hover {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* =========================================================
+   15. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-page *,
+    .contact-page *::before,
+    .contact-page *::after {
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+    }
+
+}
+
+
+
+
+/* =========================================================
+   EXPERIENCE — SIMPLE GUARANTEED ANIMATION
+========================================================= */
+
+.experience-slide {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 1s ease,
+        transform 1.2s ease;
+}
+
+.experience-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.experience-slide-image {
+    transform: scale(1.08);
+    transition:
+        transform 6s cubic-bezier(.16,1,.3,1);
+}
+
+.experience-slide.active
+.experience-slide-image {
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   STORY IMAGE
+========================================================= */
+
+.experience-story-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-story-image {
+    overflow: hidden;
+}
+
+.experience-story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: scale(1.12);
+
+    transition:
+        transform 1.8s cubic-bezier(.16,1,.3,1);
+}
+
+
+/* =========================================================
+   FINAL IMAGE
+========================================================= */
+
+.experience-final-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-final-background {
+    overflow: hidden;
+}
+
+.experience-final-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transform: scale(1.12);
+
+    transition:
+        transform 1.8s cubic-bezier(.16,1,.3,1);
+}
+
+
+/* =========================================================
+   HOVER IMAGE
+========================================================= */
+
+.experience-type-card {
+    overflow: hidden;
+}
+
+.experience-type-card .type-image {
+    overflow: hidden;
+}
+
+.experience-type-card .type-image img {
+    transition:
+        transform 1s cubic-bezier(.16,1,.3,1);
+}
+
+.experience-type-card:hover
+.type-image img {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.experience-carousel-btn {
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+.experience-carousel-btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .experience-story-image img,
+    .experience-final-background img {
+        transform: scale(1.08);
+    }
+
+}
