@@ -13029,3 +13029,329 @@ section {
     border-radius: 3px;
     pointer-events: none;
 }
+
+
+
+
+
+.about-gallery-main {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-gallery-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        transform 1.2s ease;
+}
+
+.about-gallery-image.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    z-index: 2;
+}
+
+
+
+
+/* =========================================
+   EXPERIENCE FINAL SECTION
+========================================= */
+
+.experience-final-section {
+    position: relative;
+    min-height: 620px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    isolation: isolate;
+}
+
+/* BACKGROUND IMAGE */
+.experience-final-background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.experience-final-background img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* DARK OVERLAY */
+.experience-final-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.52) 45%,
+        rgba(0, 0, 0, 0.28) 100%
+    );
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* CONTENT */
+.experience-final-section .container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.experience-final-content {
+    max-width: 760px;
+    padding: 90px 0;
+    color: #fff;
+}
+
+.experience-section-label {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.experience-final-content h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(48px, 6vw, 88px);
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+}
+
+.experience-final-content h2 span {
+    display: inline-block;
+    color: #f5b942;
+}
+
+.experience-final-content p {
+    max-width: 500px;
+    margin: 28px 0 34px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* BUTTONS */
+.experience-final-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.experience-final-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    color: #111;
+    background: #fff;
+}
+
+.secondary-button {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.experience-final-actions a i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.primary-button:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-button:hover {
+    background: rgba(255, 255, 255, 0.16);
+    transform: translateY(-3px);
+}
+
+.experience-final-actions a:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .experience-final-section {
+        min-height: 560px;
+    }
+
+    .experience-final-background img {
+        object-position: center;
+    }
+
+    .experience-final-content {
+        padding: 70px 20px;
+    }
+
+    .experience-final-content h2 {
+        font-size: clamp(42px, 12vw, 64px);
+    }
+
+    .experience-final-content p {
+        font-size: 15px;
+    }
+
+    .experience-final-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .experience-final-actions a {
+        width: 100%;
+    }
+}
+
+
+.drawer-logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.drawer-logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+.drawer-login {
+    width: 100%;
+    margin-top: 28px;
+}
+
+#mobileLoginButton {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(255, 145, 40, 0.75);
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 112, 0, 0.18),
+            rgba(255, 70, 0, 0.06)
+        );
+
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(255, 105, 0, 0.35),
+        0 0 22px rgba(255, 105, 0, 0.18),
+        inset 0 0 18px rgba(255, 105, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+#mobileLoginButton span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 145, 40, 0.6);
+    border-radius: 50%;
+
+    color: #ff8a1f;
+    font-size: 17px;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+#mobileLoginButton:hover {
+    transform: translateY(-2px);
+
+    border-color: #ff8a1f;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 112, 0, 0.30),
+            rgba(255, 70, 0, 0.12)
+        );
+
+    box-shadow:
+        0 0 10px rgba(255, 105, 0, 0.65),
+        0 0 30px rgba(255, 105, 0, 0.40),
+        0 0 55px rgba(255, 105, 0, 0.18),
+        inset 0 0 20px rgba(255, 105, 0, 0.10);
+}
+
+#mobileLoginButton:hover span {
+    background: #ff7a00;
+    color: #ffffff;
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 10px rgba(255, 122, 0, 0.8),
+        0 0 22px rgba(255, 122, 0, 0.45);
+}
+
+/* ACTIVE */
+#mobileLoginButton:active {
+    transform: translateY(0) scale(0.98);
+}

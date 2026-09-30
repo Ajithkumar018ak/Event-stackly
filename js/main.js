@@ -1754,3 +1754,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+
+    const images = document.querySelectorAll(".about-gallery-image");
+    const counter = document.getElementById("aboutSlideNumber");
+
+    if (!images.length) return;
+
+    let currentIndex = 0;
+
+    function changeAboutSlide() {
+
+        images[currentIndex].classList.remove("active");
+
+        currentIndex++;
+
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+
+        images[currentIndex].classList.add("active");
+
+        if (counter) {
+            counter.textContent = String(currentIndex + 1).padStart(2, "0");
+        }
+    }
+
+    setInterval(changeAboutSlide, 3500);
+
+});
