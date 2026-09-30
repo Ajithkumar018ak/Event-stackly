@@ -13355,3 +13355,855 @@ section {
 #mobileLoginButton:active {
     transform: translateY(0) scale(0.98);
 }
+
+
+
+
+.footer-newsletter {
+    width: 100%;
+    max-width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-newsletter h4 {
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0.12em;
+    color: #fff;
+}
+
+.footer-newsletter p {
+    margin: 0 0 11px;
+    max-width: 410px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+#newsletterForm {
+    width: 100%;
+    margin: 0;
+}
+
+.newsletter-input {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.newsletter-input input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 0 12px;
+
+    border: 0;
+    outline: 0;
+    background: transparent;
+
+    color: #fff;
+    font-size: 13px;
+}
+
+.newsletter-input input::placeholder {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+.newsletter-input button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 6px;
+
+    background: #ff6b00;
+    color: #fff;
+    cursor: pointer;
+}
+
+#newsletterMessage {
+    display: block;
+    margin: 5px 0 0;
+    min-height: 14px;
+}
+
+
+.footer-newsletter {
+    width: 100%;
+    max-width: 430px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: left;
+}
+
+/* Heading */
+.footer-newsletter h4 {
+    margin: 0 0 10px !important;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 0.12em;
+    color: #ffffff;
+}
+
+/* Description */
+.footer-newsletter p {
+    margin: 0 0 18px !important;
+    padding: 0;
+    max-width: 410px;
+
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+/* Form */
+.footer-newsletter form,
+#newsletterForm {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Input + Button */
+.newsletter-input {
+    width: 100%;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 3px;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Email Input */
+.newsletter-input input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    margin: 0;
+    padding: 0 13px;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.newsletter-input input::placeholder {
+    color: rgba(255, 255, 255, 0.42);
+}
+
+/* Subscribe Button */
+.newsletter-input button {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #ff6b00;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.newsletter-input button i {
+    font-size: 14px;
+    line-height: 1;
+}
+
+.newsletter-input button:hover {
+    background: #ff7a18;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(255, 107, 0, 0.25);
+}
+
+/* Success / Error Message */
+#newsletterMessage {
+    display: block;
+
+    margin: 6px 0 0 !important;
+    padding: 0;
+
+    min-height: 16px;
+
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-newsletter {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .footer-newsletter h4 {
+        margin-bottom: 9px !important;
+        font-size: 13px;
+    }
+
+    .footer-newsletter p {
+        margin-bottom: 16px !important;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .newsletter-input {
+        height: 48px;
+    }
+
+    .newsletter-input input {
+        padding: 0 11px;
+        font-size: 13px;
+    }
+
+    .newsletter-input button {
+        width: 40px;
+        height: 40px;
+        flex-basis: 40px;
+    }
+}
+
+
+.footer-newsletter {
+    width: 100%;
+    max-width: 430px;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    gap: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: left;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.footer-newsletter h4 {
+    display: block !important;
+
+    width: 100%;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.3;
+
+    letter-spacing: 0.12em;
+    color: #fff;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.footer-newsletter p {
+    display: block !important;
+
+    width: 100%;
+    max-width: 410px;
+
+    margin: 0 0 22px !important;
+    padding: 0 !important;
+
+    font-size: 13px;
+    line-height: 1.65;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+/* =========================
+   FORM
+========================= */
+
+.footer-newsletter form,
+.footer-newsletter #newsletterForm {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* =========================
+   EMAIL BOX
+========================= */
+
+.footer-newsletter .newsletter-input {
+    width: 100% !important;
+    height: 52px;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    gap: 5px !important;
+
+    margin: 0 !important;
+    padding: 4px !important;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.footer-newsletter .newsletter-input input {
+    flex: 1 !important;
+    width: auto !important;
+    min-width: 0 !important;
+
+    height: 100%;
+
+    margin: 0 !important;
+    padding: 0 13px !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    background: transparent !important;
+
+    color: #fff;
+    font-size: 13px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.footer-newsletter .newsletter-input button {
+    width: 42px !important;
+    height: 42px !important;
+
+    flex: 0 0 42px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 7px;
+
+    background: #ff6b00;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.footer-newsletter #newsletterMessage {
+    display: block !important;
+
+    width: 100%;
+
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+
+    min-height: 16px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .footer-newsletter {
+        max-width: 100%;
+    }
+
+    .footer-newsletter h4 {
+        margin-bottom: 12px !important;
+    }
+
+    .footer-newsletter p {
+        margin-bottom: 20px !important;
+        line-height: 1.6;
+    }
+
+    .footer-newsletter .newsletter-input {
+        height: 50px;
+    }
+}
+
+
+
+.footer-newsletter .newsletter-input {
+    position: relative !important;
+
+    width: 100% !important;
+    height: 54px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+
+    box-sizing: border-box !important;
+
+    margin: 0 !important;
+    padding: 4px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 9px !important;
+
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+
+/* EMAIL INPUT */
+
+.footer-newsletter .newsletter-input input {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: 44px !important;
+
+    flex: 1 1 auto !important;
+
+    box-sizing: border-box !important;
+
+    margin: 0 !important;
+    padding: 0 120px 0 14px !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+
+    color: #fff !important;
+
+    font-size: 13px !important;
+}
+
+
+/* SUBSCRIBE BUTTON INSIDE THE EMAIL BOX */
+
+.footer-newsletter .newsletter-input button {
+    position: absolute !important;
+
+    top: 4px !important;
+    right: 4px !important;
+    bottom: 4px !important;
+
+    width: 108px !important;
+    height: auto !important;
+
+    min-width: 108px !important;
+    max-width: 108px !important;
+
+    flex: none !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 6px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 6px !important;
+
+    background: #ff6b00 !important;
+
+    color: #fff !important;
+
+    font-family: inherit !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+
+    cursor: pointer !important;
+
+    z-index: 10 !important;
+}
+
+.footer-newsletter .newsletter-input button span {
+    display: inline-block !important;
+}
+
+.footer-newsletter .newsletter-input button i {
+    display: inline-block !important;
+    font-size: 11px !important;
+}
+
+.footer-newsletter .newsletter-input button:hover {
+    background: #ff7815 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .footer-newsletter .newsletter-input {
+        height: 52px !important;
+    }
+
+    .footer-newsletter .newsletter-input input {
+        height: 44px !important;
+        padding-right: 105px !important;
+    }
+
+    .footer-newsletter .newsletter-input button {
+        width: 94px !important;
+        min-width: 94px !important;
+        max-width: 94px !important;
+    }
+}
+
+
+.footer-newsletter {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Remove top & bottom lines from form */
+.footer-newsletter form,
+#newsletterForm {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+/* Newsletter wrapper — no extra lines */
+.footer-newsletter .newsletter-input {
+    border-top: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* If you mean completely remove ALL lines around input */
+.footer-newsletter .newsletter-input {
+    border: none !important;
+}
+
+
+@media (max-width: 768px) {
+
+    /* =========================================
+       FOOTER MAIN
+    ========================================= */
+
+    .site-footer .footer-main {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+
+        gap: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /* =========================================
+       BRAND
+    ========================================= */
+
+    .site-footer .footer-brand {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        margin: 0 0 34px !important;
+        padding: 0 !important;
+    }
+
+    .site-footer .footer-brand p {
+        margin: 14px 0 18px !important;
+        max-width: 100% !important;
+    }
+
+
+    /* =========================================
+       QUICK / DISCOVER / SUPPORT
+    ========================================= */
+
+    .site-footer .footer-column {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        flex: none !important;
+
+        margin: 0 0 32px !important;
+        padding: 0 !important;
+
+        gap: 0 !important;
+
+        float: none !important;
+    }
+
+
+    /* COLUMN HEADING */
+
+    .site-footer .footer-column h4 {
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 0 13px !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+    }
+
+
+    /* COLUMN LINKS */
+
+    .site-footer .footer-column a {
+        display: block !important;
+
+        width: auto !important;
+
+        margin: 0 0 10px !important;
+        padding: 0 !important;
+
+        text-align: left !important;
+
+        float: none !important;
+        clear: both !important;
+    }
+
+    .site-footer .footer-column a:last-child {
+        margin-bottom: 0 !important;
+    }
+
+
+    /* =========================================
+       NEWSLETTER
+    ========================================= */
+
+    .site-footer .footer-newsletter {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        display: block !important;
+
+        margin: 0 0 34px !important;
+        padding: 0 !important;
+    }
+
+    .site-footer .footer-newsletter h4 {
+        margin: 0 0 13px !important;
+    }
+
+    .site-footer .footer-newsletter p {
+        max-width: 100% !important;
+
+        margin: 0 0 20px !important;
+    }
+
+
+    /* EMAIL BOX */
+
+    .site-footer .newsletter-input {
+        position: relative !important;
+
+        width: 100% !important;
+        height: 54px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+
+        margin: 0 !important;
+        padding: 4px !important;
+
+        box-sizing: border-box !important;
+
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        border-radius: 9px !important;
+
+        background: rgba(255, 255, 255, 0.06) !important;
+    }
+
+
+    /* EMAIL INPUT */
+
+    .site-footer .newsletter-input input {
+        width: 100% !important;
+        height: 44px !important;
+
+        flex: 1 1 auto !important;
+
+        margin: 0 !important;
+        padding: 0 105px 0 13px !important;
+
+        border: 0 !important;
+        outline: 0 !important;
+
+        background: transparent !important;
+
+        color: #fff !important;
+
+        font-size: 13px !important;
+    }
+
+
+    /* SUBSCRIBE INSIDE INPUT */
+
+    .site-footer .newsletter-input button {
+        position: absolute !important;
+
+        top: 4px !important;
+        right: 4px !important;
+
+        width: 94px !important;
+        height: 44px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 5px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border: 0 !important;
+        border-radius: 6px !important;
+
+        background: #ff6b00 !important;
+        color: #fff !important;
+
+        font-size: 11px !important;
+        font-weight: 700 !important;
+
+        z-index: 5 !important;
+    }
+
+
+    /* =========================================
+       FOOTER BOTTOM
+    ========================================= */
+
+    .site-footer .footer-bottom {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        gap: 16px !important;
+
+        margin: 0 !important;
+        padding-top: 24px !important;
+    }
+
+    .site-footer .footer-bottom > div {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        gap: 10px !important;
+    }
+
+    .site-footer .footer-bottom a {
+        display: block !important;
+        margin: 0 !important;
+    }
+}
+
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    width: 150px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

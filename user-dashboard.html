@@ -2073,7 +2073,7 @@
                     </button>
 
                     <div class="top-left">
-                        <h1 id="pageGreeting">Good Morning, Users</h1>
+                      <h1 id="pageGreeting">Good Morning, User</h1>
                         <p id="pageSubtitle">
                             Discover unforgettable events happening near you.
                         </p>
@@ -4095,6 +4095,25 @@
         loadFromHash();
 
     });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const pageGreeting =
+        document.getElementById("pageGreeting");
+
+    const userName =
+        sessionStorage.getItem("vybeUserName");
+
+    if (pageGreeting && userName) {
+
+        pageGreeting.textContent =
+            `Good Morning, ${userName}`;
+
+    }
+
+});
+
+   
 </script>
 
 </body>
