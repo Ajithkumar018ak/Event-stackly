@@ -14207,3 +14207,156 @@ section {
     height: auto;
     display: block;
 }
+
+
+
+
+.heading-side p {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+    max-width: 520px;
+}
+
+
+
+
+
+
+
+/* =========================================================
+   HOW IT WORKS — TEXT SIZE
+========================================================= */
+
+.how-card h3 {
+    font-size: 24px !important;
+    line-height: 1.25 !important;
+}
+
+.how-card p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.how-card ul li {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+.how-card-top > span {
+    font-size: 13px !important;
+}
+
+.how-icon {
+    font-size: 20px !important;
+}
+
+.how-note span {
+    font-size: 12px !important;
+}
+
+.how-note strong {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+}
+
+.how-note a {
+    font-size: 14px !important;
+}
+
+
+.how-card p {
+    color: #000 !important;
+}
+
+
+
+.experience-top > p {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+.how-heading > p {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+
+.experience-feature p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+.experience-bottom span {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.08em;
+}
+
+
+
+.community-heading > p {
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+.community-stat > span {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.08em;
+}
+
+
+.community-stat p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+.community-benefit {
+    font-size: inherit;
+}
+
+.benefit > span {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.08em;
+}
+
+.benefit > strong {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+}
+
+.benefit > p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+
+
+.intro-mini-card > span {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+}
+
+.intro-mini-card > i {
+    font-size: 24px !important;
+}
+
+.intro-mini-card > h3 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+}
+
+.intro-mini-card > p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+}
