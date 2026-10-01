@@ -14499,3 +14499,376 @@ section {
 .people-item p {
     font-size: 1.05em;
 }
+
+
+
+/* =========================================================
+   VYBE EVENTS — TEXT SIZE +5%
+========================================================= */
+
+.events-hero-section .section-label,
+.events-location {
+    font-size: 1.05em;
+}
+
+.events-hero-eyebrow {
+    font-size: 1.05em;
+}
+
+.events-hero-content h1 {
+    font-size: 105%;
+}
+
+.events-hero-content p {
+    font-size: 105%;
+}
+
+.events-hero-stat strong {
+    font-size: 105%;
+}
+
+.events-hero-stat span,
+.events-hero-scroll span {
+    font-size: 105%;
+}
+
+
+/* FILTER */
+
+.events-filter-head .section-label {
+    font-size: 1.05em;
+}
+
+.events-filter-head h2 {
+    font-size: 105%;
+}
+
+.events-filter-count {
+    font-size: 105%;
+}
+
+.event-filter {
+    font-size: 105%;
+}
+
+
+/* FEATURED EVENTS */
+
+.section-heading-row .section-label {
+    font-size: 1.05em;
+}
+
+.section-heading-row h2 {
+    font-size: 105%;
+}
+
+.heading-note span,
+.heading-note p {
+    font-size: 105%;
+}
+
+.event-card-meta {
+    font-size: 105%;
+}
+
+.event-card-content h3 {
+    font-size: 105%;
+}
+
+.event-card-content p {
+    font-size: 105%;
+}
+
+.event-card-bottom strong,
+.event-card-bottom span {
+    font-size: 105%;
+}
+
+
+
+/* =========================================================
+   VYBE EVENTS — SECTIONS 04–08 TEXT +3%
+========================================================= */
+
+/* 04 — UPCOMING EVENTS */
+
+.upcoming-heading .section-label,
+.upcoming-date {
+    font-size: 103%;
+}
+
+.upcoming-heading h2 {
+    font-size: 103%;
+}
+
+.upcoming-date-block strong {
+    font-size: 103%;
+}
+
+.upcoming-date-block span {
+    font-size: 103%;
+}
+
+.upcoming-event-info > span {
+    font-size: 103%;
+}
+
+.upcoming-event-info h3 {
+    font-size: 103%;
+}
+
+.upcoming-event-info p {
+    font-size: 103%;
+}
+
+.upcoming-event-price span,
+.upcoming-event-price strong {
+    font-size: 103%;
+}
+
+
+/* 05 — CATEGORIES */
+
+.categories-heading .section-label {
+    font-size: 103%;
+}
+
+.categories-heading h2 {
+    font-size: 103%;
+}
+
+.category-number {
+    font-size: 103%;
+}
+
+.category-content span {
+    font-size: 103%;
+}
+
+.category-content h3 {
+    font-size: 103%;
+}
+
+
+/* 06 — EVENT EXPERIENCE */
+
+.experience-image-tag {
+    font-size: 103%;
+}
+
+.experience-content .section-label {
+    font-size: 103%;
+}
+
+.experience-content h2 {
+    font-size: 103%;
+}
+
+.experience-content > p {
+    font-size: 103%;
+}
+
+.experience-point > span {
+    font-size: 103%;
+}
+
+.experience-point strong {
+    font-size: 103%;
+}
+
+.experience-point p {
+    font-size: 103%;
+}
+
+.experience-button {
+    font-size: 103%;
+}
+
+
+/* 07 — CITY VYBE */
+
+.city-vybe-heading .section-label {
+    font-size: 103%;
+}
+
+.city-vybe-heading h2 {
+    font-size: 103%;
+}
+
+.city-vybe-heading > p {
+    font-size: 103%;
+}
+
+.city-card-content > span {
+    font-size: 103%;
+}
+
+.city-card-content h3 {
+    font-size: 103%;
+}
+
+.city-card-content small {
+    font-size: 103%;
+}
+
+
+/* 08 — FINAL CTA */
+
+.events-final-content .section-label {
+    font-size: 103%;
+}
+
+.events-final-content h2 {
+    font-size: 103%;
+}
+
+.events-final-content > p {
+    font-size: 103%;
+}
+
+.events-final-actions a {
+    font-size: 103%;
+}
+
+
+
+/* =========================================================
+   VYBE EXPERIENCE — ALL TEXT SIZE +2%
+========================================================= */
+
+/* HERO */
+
+.experience-eyebrow,
+.experience-location {
+    font-size: 102%;
+}
+
+.experience-hero-kicker {
+    font-size: 102%;
+}
+
+.experience-hero-main h1 {
+    font-size: 102%;
+}
+
+.experience-hero-description {
+    font-size: 102%;
+}
+
+.experience-hero-meta span {
+    font-size: 102%;
+}
+
+.experience-carousel-counter {
+    font-size: 102%;
+}
+
+
+/* INTRO */
+
+.experience-section-label {
+    font-size: 102%;
+}
+
+.experience-intro-content h2 {
+    font-size: 102%;
+}
+
+.experience-intro-content p {
+    font-size: 102%;
+}
+
+
+/* EXPERIENCE PILLARS */
+
+.experience-section-heading h2 {
+    font-size: 102%;
+}
+
+.pillar-number {
+    font-size: 102%;
+}
+
+.pillar-icon {
+    font-size: 102%;
+}
+
+.experience-pillar h3 {
+    font-size: 102%;
+}
+
+.experience-pillar p {
+    font-size: 102%;
+}
+
+.experience-pillar a {
+    font-size: 102%;
+}
+
+
+/* VISUAL STORY */
+
+.experience-story-content h2 {
+    font-size: 102%;
+}
+
+.experience-story-content > p {
+    font-size: 102%;
+}
+
+.experience-story-stats strong {
+    font-size: 102%;
+}
+
+.experience-story-stats span {
+    font-size: 102%;
+}
+
+
+/* JOURNEY */
+
+.journey-number {
+    font-size: 102%;
+}
+
+.journey-icon {
+    font-size: 102%;
+}
+
+.journey-step h3 {
+    font-size: 102%;
+}
+
+.journey-step p {
+    font-size: 102%;
+}
+
+
+/* EXPERIENCE TYPES */
+
+.experience-types-header h2 {
+    font-size: 102%;
+}
+
+.type-content > span {
+    font-size: 102%;
+}
+
+.type-content h3 {
+    font-size: 102%;
+}
+
+
+/* FINAL CTA */
+
+.experience-final-content h2 {
+    font-size: 102%;
+}
+
+.experience-final-content > p {
+    font-size: 102%;
+}
+
+.experience-final-actions a {
+    font-size: 102%;
+}
