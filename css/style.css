@@ -14360,3 +14360,142 @@ section {
     font-size: 15px !important;
     line-height: 1.6 !important;
 }
+
+
+
+
+
+/* Light text size increase */
+
+.artist-index strong {
+    font-size: 1.05rem;
+}
+
+.artist-index span {
+    font-size: 0.9rem;
+}
+
+.artist-category {
+    font-size: 0.78rem;
+}
+
+.artist-primary h2 {
+    font-size: clamp(2.3rem, 4vw, 4rem);
+}
+
+.artist-primary p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.artist-details-grid small {
+    font-size: 0.72rem;
+}
+
+.artist-details-grid strong {
+    font-size: 0.98rem;
+}
+
+.artist-ticket-button {
+    font-size: 0.95rem;
+}
+
+.progress-label {
+    font-size: 0.76rem;
+}
+
+#progressPercent {
+    font-size: 0.82rem;
+}
+
+.hero-scroll-indicator {
+    font-size: 0.76rem;
+}
+
+
+
+.artist-ticket-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+    white-space: nowrap;
+}
+
+.artist-ticket-button span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+
+
+.category-feature p,
+.category-row-content p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+
+
+.trend-content p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+
+
+.value-description {
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+
+
+.how-card-top > span {
+    font-size: 0.9rem;
+}
+
+.how-icon {
+    font-size: 1rem;
+}
+
+.how-card h3 {
+    font-size: 1.45rem;
+}
+
+.how-card p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+}
+
+.how-card ul li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.how-connector {
+    font-size: 1.2rem;
+}
+
+.how-note > span {
+    font-size: 0.78rem;
+}
+
+.how-note strong {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.how-note a {
+    font-size: 0.9rem;
+}
+
+
+
+.people-item p {
+    font-size: 1.05em;
+}

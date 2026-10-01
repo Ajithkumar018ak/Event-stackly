@@ -5399,6 +5399,25 @@
 
         });
 
+        /* =====================================================
+   ADMIN 404 ROUTING
+===================================================== */
+
+document.querySelectorAll(
+    'a[href="404.html"], a[data-link="404.html"]'
+).forEach(link => {
+
+    link.setAttribute(
+        "href",
+        "404.html?from=admin"
+    );
+
+    link.setAttribute(
+        "data-link",
+        "404.html?from=admin"
+    );
+
+});
     </script>
 
 </body>
